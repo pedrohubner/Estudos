@@ -60,9 +60,11 @@ public class CafePassado {
         Cafe.servirXicara();
 
         System.out.println("Quero " + cafe3.getChocolate() + " colheres de achocolatado.\n" + "Também vou por "
-                + cafe3.getAcucar() + " colheres de açucar.\n");
+                + cafe3.getAcucar() + " colheres de açucar.");
 
         cafe3.mexerColher(cafe3.getMexer(), cafe3.getColher());
+
+        System.out.println("\nMeu café está pronto");
 
     }
 }
