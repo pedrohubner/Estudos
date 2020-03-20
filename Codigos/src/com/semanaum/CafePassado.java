@@ -61,5 +61,7 @@ public class CafePassado {
 
         System.out.println("Quero " + cafe3.getChocolate() + " colheres de achocolatado.\n" + "Também vou por "
                 + cafe3.getAcucar() + " colheres de açucar.\n");
+
+        System.out.println("Café tá forte");
     }
 }
