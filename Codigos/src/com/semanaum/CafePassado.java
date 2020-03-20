@@ -36,7 +36,7 @@ public class CafePassado {
                 " gotas de adoçante\n");
 
         Mocaccino cafe3 = new Mocaccino(0, false, 0, false, 1.5, 0,
-                0);
+                0, "Peguei a colher", " e agora vou mexer meu café");
 
         System.out.println((!cafe3.getChaleira() ? "A Chaleira está desligada.":"Chaleira está ligada.") +
                 "\nColoco " + cafe3.getColheres() + " colheres de café na cafeteira." +
@@ -60,8 +60,11 @@ public class CafePassado {
         Cafe.servirXicara();
 
         System.out.println("Quero " + cafe3.getChocolate() + " colheres de achocolatado.\n" + "Também vou por "
-                + cafe3.getAcucar() + " colheres de açucar.\n");
+                + cafe3.getAcucar() + " colheres de açucar.");
 
-        System.out.println("Café tá forte");
+        cafe3.mexerColher(cafe3.getMexer(), cafe3.getColher());
+
+        System.out.println("\nMeu café está pronto");
+
     }
 }
