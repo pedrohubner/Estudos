@@ -64,7 +64,7 @@ public class CafePassado {
 
         cafe3.mexerColher(cafe3.getMexer(), cafe3.getColher());
 
-        System.out.println("\nMeu café está pronto");
+        System.out.println("\nO café está pronto");
 
     }
 }
