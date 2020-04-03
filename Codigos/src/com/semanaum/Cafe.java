@@ -90,7 +90,7 @@ public abstract class Cafe implements Adocar {
     //Método abstrato
     public abstract void colocarAcucar();
 
-    //Método implementado da interface "com.semanaum.Adocar.java"
+    //Método implementado da interface "com.semanaum.semanaum.Adocar.java"
     public void colocarAdocante() {
         getAdocante();
     }
