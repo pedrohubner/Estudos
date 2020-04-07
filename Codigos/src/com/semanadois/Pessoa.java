@@ -80,4 +80,9 @@ public class Pessoa {
     public void fazerAniversario(){
          idade++;
     }
+
+    @Override
+    public String toString() {
+        return nome + " tem " + idade + " anos e mora em " + endereco;
+    }
 }
