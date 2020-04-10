@@ -1,6 +1,6 @@
 package com.semanadois;
 
-public class Pessoa {
+public abstract class Pessoa {
 
     private String nome;
     private int idade;
@@ -81,8 +81,6 @@ public class Pessoa {
          idade++;
     }
 
-    @Override
-    public String toString() {
-        return nome + " tem " + idade + " anos e mora em " + endereco;
-    }
+    //Método abstrato
+    public void exibirDados(){};
 }
