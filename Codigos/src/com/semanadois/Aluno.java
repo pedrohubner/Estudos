@@ -42,7 +42,7 @@ public class Aluno extends Pessoa {
 
     @Override
     public String toString() {
-        return "A aluna " + getNome() + " atingiu as seguintes notas: " + nota1 + ", " + nota2 + ".\n"
+        return "A(o) aluna(o) " + getNome() + " atingiu as seguintes notas: " + nota1 + ", " + nota2 + ".\n"
         + "Alcançando uma média de " + calcularMedia();
     }
 }
