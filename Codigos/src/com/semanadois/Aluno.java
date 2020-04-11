@@ -40,9 +40,14 @@ public class Aluno extends Pessoa {
         return nota1 + nota2 / 2;
     }
 
+//    @Override
+//    public String toString() {
+//        return "A(o) aluna(o) " + getNome() + " atingiu as seguintes notas: " + nota1 + ", " + nota2 + ".\n"
+//        + "Alcançando uma média de " + calcularMedia();
+//    }
+
     @Override
     public String toString() {
-        return "A(o) aluna(o) " + getNome() + " atingiu as seguintes notas: " + nota1 + ", " + nota2 + ".\n"
-        + "Alcançando uma média de " + calcularMedia();
+        return /*"Aluno(a): " +*/ getNome() + ", sua nota: " + nota1;
     }
 }
