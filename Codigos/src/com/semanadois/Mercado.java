@@ -4,7 +4,7 @@ public class Mercado {
 
     private String produto;
     public static double valor;
-    private int qntd;
+    public static int qntd;
     private int codigo;
 
     public Mercado(String produto, double valor, int qntd, int codigo){
@@ -49,6 +49,8 @@ public class Mercado {
     public double aplicarDesconto(double valor){
         return valor/1.4 ;
     }
+
+    public void pegarProduto(){}
 
     @Override
     public String toString() {
