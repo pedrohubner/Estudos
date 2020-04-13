@@ -2,9 +2,11 @@ package com.semanadois;
 
 public class Cliente {
     private String nome;
+    private double qntdDinheiro;
 
-    public Cliente(String nome){
+    public Cliente(String nome, double qntdDinheiro){
         this.nome = nome;
+        this.qntdDinheiro = qntdDinheiro;
     }
 
     public String getNome() {
@@ -13,6 +15,18 @@ public class Cliente {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public double getQntdDinheiro() {
+        return qntdDinheiro;
+    }
+
+    public void setQntdDinheiro(double qntdDinheiro) {
+        this.qntdDinheiro = qntdDinheiro;
+    }
+
+    public double comprarProduto(double qntdDinheiro){
+        return  qntdDinheiro - Mercado.valor;
     }
 
     @Override
