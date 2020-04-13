@@ -3,7 +3,7 @@ package com.semanadois;
 public class Mercado {
 
     private String produto;
-    private double valor;
+    public static double valor;
     private int qntd;
     private int codigo;
 
@@ -44,6 +44,10 @@ public class Mercado {
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
+    }
+
+    public double aplicarDesconto(double valor){
+        return valor/1.4 ;
     }
 
     @Override
