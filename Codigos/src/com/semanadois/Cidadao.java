@@ -36,10 +36,10 @@ public class Cidadao {
         System.out.println(produto);
 
         //Queue para fila de clientes
-        Cliente cliente1 = new Cliente("Matthew");
-        Cliente cliente2 = new Cliente("Karen");
-        Cliente cliente3 = new Cliente("Franklin");
-        Cliente cliente4 = new Cliente("Wilson");
+        Cliente cliente1 = new Cliente("Matthew", 490.0);
+        Cliente cliente2 = new Cliente("Karen", 585.70);
+        Cliente cliente3 = new Cliente("Franklin", 450.8);
+        Cliente cliente4 = new Cliente("Wilson", 600.5);
 
         fila.add(cliente1);
         fila.add(cliente2);
