@@ -6,12 +6,14 @@ public class Mercado {
     public static double valor;
     public static int qntd;
     private int codigo;
+    private boolean carrinho;
 
-    public Mercado(String produto, double valor, int qntd, int codigo){
+    public Mercado(String produto, double valor, int qntd, int codigo, boolean carrinho){
         this.produto = produto;
         this.valor = valor;
         this.qntd = qntd;
         this.codigo = codigo;
+        this.carrinho = carrinho;
     }
 
     public String getProduto(){
@@ -46,11 +48,21 @@ public class Mercado {
         this.codigo = codigo;
     }
 
-    public double aplicarDesconto(double valor){
+    public boolean isCarrinho() {
+        return carrinho;
+    }
+
+    public void setCarrinho(boolean carrinho) {
+        this.carrinho = carrinho;
+    }
+
+    public double aplicarDesconto(){
         return valor/1.4 ;
     }
 
-    public void pegarProduto(){}
+    public void pegarCarrinho() {
+        System.out.println("Cliente pegou um carrinho");
+    }
 
     @Override
     public String toString() {
@@ -58,6 +70,4 @@ public class Mercado {
         return "O " + produto + " custa " + valor;
     }
 
-    //Método abstrato
-    public void exibirDados(){};
 }
