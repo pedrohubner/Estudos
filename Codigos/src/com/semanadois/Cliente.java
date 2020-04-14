@@ -25,7 +25,7 @@ public class Cliente {
         this.qntdDinheiro = qntdDinheiro;
     }
 
-    public double comprarProduto(double qntdDinheiro){
+    public double comprarProduto(){
         return  qntdDinheiro - Mercado.valor;
     }
 
