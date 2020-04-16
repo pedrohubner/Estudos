@@ -25,8 +25,12 @@ public class Cliente {
         this.qntdDinheiro = qntdDinheiro;
     }
 
+    public void entrarNoMercado(){
+        System.out.println(nome + " entrou no mercado");
+    }
+
     public double comprarProduto(){
-        return  qntdDinheiro - Mercado.valor;
+        return qntdDinheiro - Mercado.valor;
     }
 
     @Override
