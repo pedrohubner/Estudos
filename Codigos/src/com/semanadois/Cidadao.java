@@ -74,7 +74,7 @@ public class Cidadao {
         /**
          *Queue simulando uma fila de clientes
          */
-        Cliente cliente1 = new Cliente("Matthew", 10.0);
+        Cliente cliente1 = new Cliente("Matthew", 5);
         Cliente cliente2 = new Cliente("Karen", 585.70);
         Cliente cliente3 = new Cliente("Franklin", 450.8);
         Cliente cliente4 = new Cliente("Wilson", 600.5);
@@ -102,7 +102,6 @@ public class Cidadao {
 
         /**
          * Map para relacionar o cliente com o produto que irá comprar
-         * COLOCAR NO FIM DO CÓDIGO PARA UMA POSSÍVEL LISTA
          */
         compra.put(cliente1, produto23);
         compra.put(cliente3, produto41);
