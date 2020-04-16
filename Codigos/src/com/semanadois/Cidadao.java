@@ -14,9 +14,7 @@ public class Cidadao {
         Map <Cliente, Mercado> compra = new HashMap<>();
 
         /**
-         * Stack para simular quatro tipos de produtos
-         * e cada produto com quatro marcas
-         * No caso, cada produto teria uma prateleira
+         * Stack de quatro produtos e cada produto possui quatro tipos
          */
         //produto sabonete
         Mercado produto11 = new Mercado("Sabonete Lux", 4.00, 8, 111, true);
@@ -74,9 +72,9 @@ public class Cidadao {
         System.out.println(produto);
 
         /**
-         * Queue para simular uma fila onde estarão os clientes
+         *Queue simulando uma fila de clientes
          */
-        Cliente cliente1 = new Cliente("Matthew", 490.0);
+        Cliente cliente1 = new Cliente("Matthew", 5);
         Cliente cliente2 = new Cliente("Karen", 585.70);
         Cliente cliente3 = new Cliente("Franklin", 450.8);
         Cliente cliente4 = new Cliente("Wilson", 600.5);
@@ -116,7 +114,7 @@ public class Cidadao {
         System.out.println("\n");
 
         /**
-         * Set para apresentes os produtos que foram colocados no carrinho
+         * Set para produtos que entram no carrinho
          */
         carrinho.add(produto11);
         carrinho.add(produto33);
