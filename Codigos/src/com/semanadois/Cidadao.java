@@ -74,7 +74,7 @@ public class Cidadao {
         /**
          *Queue simulando uma fila de clientes
          */
-        Cliente cliente1 = new Cliente("Matthew", 5);
+        Cliente cliente1 = new Cliente("Matthew", 10.0);
         Cliente cliente2 = new Cliente("Karen", 585.70);
         Cliente cliente3 = new Cliente("Franklin", 450.8);
         Cliente cliente4 = new Cliente("Wilson", 600.5);
@@ -109,7 +109,14 @@ public class Cidadao {
         compra.put(cliente2, produto12);
         compra.put(cliente4, produto34);
 
-        System.out.println(compra);
+        //Método para exibir chaves
+        System.out.println(compra.keySet());
+
+        //Método para exibir valores
+        System.out.println(compra.values());
+
+        //Método para exibir chaves e valores
+        System.out.println(compra.entrySet());
 
         System.out.println("\n");
 
