@@ -1,4 +1,4 @@
-package com.semanadois;
+package com.semanadois.exercicios;
 
 public class Cliente implements Runnable{
     private String nome;
