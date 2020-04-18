@@ -1,12 +1,12 @@
 package com.semanadois.exercicios;
 
-public class Cliente implements Runnable{
+public class Clientela implements Runnable{
     private String nome;
     private double qntdDinheiro;
     private boolean entrar;
     Mercado mercado;
 
-    public Cliente(String nome, double qntdDinheiro, boolean entrar){
+    public Clientela(String nome, double qntdDinheiro, boolean entrar){
         this.nome = nome;
         this.qntdDinheiro = qntdDinheiro;
         this.entrar = entrar;
