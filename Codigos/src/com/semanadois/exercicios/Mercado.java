@@ -60,9 +60,7 @@ public class Mercado {
         return valor/1.4 ;
     }
 
-    public void pegarCarrinho() {
-        System.out.println("Cliente pegou um carrinho");
-    }
+    public void pegarCarrinho(){}
 
     @Override
     public String toString() {

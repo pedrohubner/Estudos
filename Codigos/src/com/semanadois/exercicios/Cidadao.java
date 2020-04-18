@@ -1,17 +1,19 @@
-package com.semanadois;
+package com.semanadois.exercicios;
+
 import java.util.*;
 
 public class Cidadao {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IndexOutOfBoundsException{
 
         //Fazer classe de classe mercado e depois instanciar um objeto produto para usar na Stack
-        Stack <Mercado> produto = new Stack<>();
+        List <Mercado> produto = new ArrayList<>();
         //Fazer uma classe para clientes, que servirá para o queue (first in, first out)
         Queue <Cliente> fila = new LinkedList<>();
         //Set para criar lista de produtos que entram no carrinho
         Set <Mercado> carrinho = new HashSet<>();
         //Map para associar cliente com a compra
         Map <Cliente, Mercado> compra = new HashMap<>();
+
 
         /**
          * Stack de quatro produtos e cada produto possui quatro tipos
@@ -38,46 +40,46 @@ public class Cidadao {
         Mercado produto44 = new Mercado("Pão Bazotti", 6.99, 19, 444, true);
 
         //Sabonete
-        produto.push(produto11);
-        produto.push(produto12);
-        produto.push(produto13);
-        produto.push(produto14);
+        produto.add(produto11);
+        produto.add(produto12);
+        produto.add(produto13);
+        produto.add(produto14);
         //Shampoo
-        produto.push(produto21);
-        produto.push(produto22);
-        produto.push(produto23);
-        produto.push(produto24);
+        produto.add(produto21);
+        produto.add(produto22);
+        produto.add(produto23);
+        produto.add(produto24);
         //Desodorante
-        produto.push(produto31);
-        produto.push(produto32);
-        produto.push(produto33);
-        produto.push(produto34);
+        produto.add(produto31);
+        produto.add(produto32);
+        produto.add(produto33);
+        produto.add(produto34);
         //Pãos
-        produto.push(produto41);
-        produto.push(produto42);
-        produto.push(produto43);
-        produto.push(produto44);
+        produto.add(produto41);
+        produto.add(produto42);
+        produto.add(produto43);
+        produto.add(produto44);
 
         System.out.println(produto);
 
         //imprimindo o produto que está no topo
-        System.out.println(produto.peek());
+        //System.out.println(produto.get(produto12.getQntd()));
 
         //verificando se a lista de produtos está vazia
-        System.out.println(produto.empty());
+        System.out.println(produto.isEmpty());
 
         //retirando o produto no topo
-        produto.pop();
+        produto.remove(produto12);
 
         System.out.println(produto);
 
         /**
          *Queue simulando uma fila de clientes
          */
-        Cliente cliente1 = new Cliente("Matthew", 5);
-        Cliente cliente2 = new Cliente("Karen", 585.70);
-        Cliente cliente3 = new Cliente("Franklin", 450.8);
-        Cliente cliente4 = new Cliente("Wilson", 600.5);
+        Cliente cliente1 = new Cliente("Matthew", 5, true);
+        Cliente cliente2 = new Cliente("Karen", 585.70, true);
+        Cliente cliente3 = new Cliente("Franklin", 450.8, true);
+        Cliente cliente4 = new Cliente("Wilson", 600.5, true);
 
         fila.add(cliente1);
         fila.add(cliente2);
@@ -130,10 +132,18 @@ public class Cidadao {
 
         System.out.println("\n");
 
-        System.out.println(cliente1.getNome() + " está passando no caixa para comprar o produto "
-                + produto11.getProduto());
-        System.out.println(cliente1.getNome() + " comprou o Sabonte e ficou com "
-                + cliente1.comprarProduto() + " reais");
+        try {
+            cliente1.run();
+        }catch (IndexOutOfBoundsException e){
+            System.out.println("Não foi possível efetuar a compra");
+        }
 
+        cliente4.entrarNoMercado();
+
+        cliente4.setEntrar(false);
+
+        cliente4.entrarNoMercado();
+
+        //Thread caixa1 = new Thread(cliente2.run());
     }
 }
