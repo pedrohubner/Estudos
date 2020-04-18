@@ -8,11 +8,11 @@ public class Cidadao {
         //Fazer classe de classe mercado e depois instanciar um objeto produto para usar na Stack
         List <Mercado> produto = new ArrayList<>();
         //Fazer uma classe para clientes, que servirá para o queue (first in, first out)
-        Queue <Cliente> fila = new LinkedList<>();
+        Queue <Clientela> fila = new LinkedList<>();
         //Set para criar lista de produtos que entram no carrinho
         Set <Mercado> carrinho = new HashSet<>();
         //Map para associar cliente com a compra
-        Map <Cliente, Mercado> compra = new HashMap<>();
+        Map <Clientela, Mercado> compra = new HashMap<>();
 
 
         /**
@@ -76,15 +76,15 @@ public class Cidadao {
         /**
          *Queue simulando uma fila de clientes
          */
-        Cliente cliente1 = new Cliente("Matthew", 5, true);
-        Cliente cliente2 = new Cliente("Karen", 585.70, true);
-        Cliente cliente3 = new Cliente("Franklin", 450.8, true);
-        Cliente cliente4 = new Cliente("Wilson", 600.5, true);
+        Clientela clientela1 = new Clientela("Matthew", 5, true);
+        Clientela clientela2 = new Clientela("Karen", 585.70, true);
+        Clientela clientela3 = new Clientela("Franklin", 450.8, true);
+        Clientela clientela4 = new Clientela("Wilson", 600.5, true);
 
-        fila.add(cliente1);
-        fila.add(cliente2);
-        fila.add(cliente3);
-        fila.add(cliente4);
+        fila.add(clientela1);
+        fila.add(clientela2);
+        fila.add(clientela3);
+        fila.add(clientela4);
 
         System.out.println("\n");
 
@@ -105,10 +105,10 @@ public class Cidadao {
         /**
          * Map para relacionar o cliente com o produto que irá comprar
          */
-        compra.put(cliente1, produto23);
-        compra.put(cliente3, produto41);
-        compra.put(cliente2, produto12);
-        compra.put(cliente4, produto34);
+        compra.put(clientela1, produto23);
+        compra.put(clientela3, produto41);
+        compra.put(clientela2, produto12);
+        compra.put(clientela4, produto34);
 
         //Método para exibir chaves
         System.out.println(compra.keySet());
@@ -133,16 +133,16 @@ public class Cidadao {
         System.out.println("\n");
 
         try {
-            cliente1.run();
+            clientela1.run();
         }catch (IndexOutOfBoundsException e){
             System.out.println("Não foi possível efetuar a compra");
         }
 
-        cliente4.entrarNoMercado();
+        clientela4.entrarNoMercado();
 
-        cliente4.setEntrar(false);
+        clientela4.setEntrar(false);
 
-        cliente4.entrarNoMercado();
+        clientela4.entrarNoMercado();
 
         //Thread caixa1 = new Thread(cliente2.run());
     }
