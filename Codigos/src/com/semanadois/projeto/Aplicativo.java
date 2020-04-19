@@ -30,17 +30,10 @@ public class Aplicativo {
         System.out.println("\nSelecione:");
         int escolha = input.nextInt();
 
-        switch (escolha) {
-            case 1:
-                System.out.println(clientes);
-                break;
-            case 2:
-                System.out.println(produtos);
-                break;
-            default:
-                System.out.println("Não foi possível executar função.");
-                break;
-        }
-
+        if (escolha == 1) {
+            System.out.println(cli1);
+        } else if (escolha == 2)
+            System.out.println(produtos);
+        else System.out.println("Não foi possível realizar operação");
     }
 }
