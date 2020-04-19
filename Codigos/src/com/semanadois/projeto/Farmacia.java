@@ -29,4 +29,9 @@ public class Farmacia {
         double desconto = ((preco * 2) /100);
         return desconto;
     }
+
+    @Override
+    public String toString() {
+        return " " + nomeProduto + " - R$" + preco;
+    }
 }
