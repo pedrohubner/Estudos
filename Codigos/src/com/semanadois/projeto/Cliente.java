@@ -25,6 +25,10 @@ public class Cliente {
         this.qntdDinheiro = qntdDinheiro;
     }
 
+    public void exibirDados(){
+        System.out.println("Cliente: " + nome + "\nSaldo: " + qntdDinheiro);
+    }
+
     public double comprarProduto(double qntdDinheiro){
         if (this.qntdDinheiro < Farmacia.preco){
             Exception e;
