@@ -34,6 +34,6 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente: " + nome + " Saldo: ";
+        return "Cliente: " + nome + "\n Saldo: " + qntdDinheiro;
     }
 }
