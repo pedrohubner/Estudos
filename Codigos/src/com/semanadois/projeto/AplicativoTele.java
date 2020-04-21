@@ -1,9 +1,7 @@
 package com.semanadois.projeto;
-import com.semanadois.exercicios.Mercado;
-
 import java.util.*;
 
-public class Aplicativo {
+public class AplicativoTele {
     public static void main(String[] args) throws StackOverflowError{
         Scanner input = new Scanner(System.in);
 
@@ -11,6 +9,7 @@ public class Aplicativo {
         Set <Cliente> clientes = new HashSet<>();
         Map <Cliente, Farmacia> compra = new HashMap<>();
         Queue <Mensagem> msg = new LinkedList<>();
+        Stack <Mensagem> aviso = new Stack<>();
 
         Farmacia produto11 = new Farmacia("Dorflex", 1.5);
         Farmacia produto12 = new Farmacia("Dipirona", 5.00);
@@ -20,38 +19,61 @@ public class Aplicativo {
         produtos.add(produto12);
         produtos.add(produto13);
 
-        Cliente cli1 = new Cliente("Marcos", 60.8);
-        Cliente cli2 = new Cliente("Karina", 86.0);
-        Cliente cli3 = new Cliente("Luana", 75.0);
+        Cliente cli1 = new Cliente("Marcos", "PoA", "897.651.243-08", "Débito",
+                72.4);
+        Cliente cli2 = new Cliente("Karina", "Eldorado", "098.765.432-10",
+                "Crédito", 85.9);
+        Cliente cli3 = new Cliente("Luana", "Gtí", "012.345.678-90", "Débito",
+                50.6);
 
         clientes.add(cli1);
         clientes.add(cli2);
         clientes.add(cli3);
 
+        compra.put(cli1, produto13);
+        compra.put(cli2, produto11);
+
         Mensagem msg1 = new Mensagem("Bom dia! Confira os descontos do Dorflex para o dia de hoje!");
-        Mensagem msg2 = new Mensagem("\nBoa tarde! No dia 26/04 estaremos distribuindo máscaras na filial 48.");
+        Mensagem msg2 = new Mensagem("Nova atualização do app!");
 
         msg.add(msg1);
         msg.add(msg2);
 
-        msg.remove();
+        Mensagem aviso1 = new Mensagem("Novo Pedido!\nCliente: " + cli1.getNome() + "\nProduto: " +
+                produto13.getPreco() + " - R$" + produto13.getPreco() + "\nForma de pagamento: " +
+                cli1.getFormaPagamento());
+        Mensagem aviso2 = new Mensagem("\nNovo Pedido!\nCliente: " + cli2.getNome() + "\nProduto: " +
+                produto11.getPreco() + " - R$" + produto11.getPreco() + "\nForma de pagamento: " +
+                cli2.getFormaPagamento());
+
+        aviso.push(aviso1);
+        aviso.push(aviso2);
 
         System.out.println("\n===== Aplicativo Farmácia =====\n\nEscolhe uma das opções:\n 1 - Exibir lista " +
-                "de produtos e seus valores\n 2 - Exibir dados do usuário\n 3 - Exibir avisos");
+                "de pedidos\n 2 - Exibir lista de produtos\n 3 - Exibir lista de clientes\n " +
+                "4 - Exibir lista de compras\n 5 - Exibir avisos");
 
         System.out.println("\nSelecione:");
         int escolha = input.nextInt();
 
         switch (escolha){
             case 1:
-                System.out.println(produtos);
+                System.out.println(aviso);
                 break;
 
             case 2:
-                System.out.println(cli2);
+                System.out.println(produtos);
                 break;
 
             case 3:
+                System.out.println(clientes);
+                break;
+
+            case 4:
+                System.out.println(compra);
+                break;
+
+            case 5:
                 System.out.println(msg);
                 break;
 
@@ -60,12 +82,6 @@ public class Aplicativo {
                 break;
         }
 
-        /**
-         *Try/Catch para implementar método comprarProduto
-         * erro de loop do valor e também exception não tratada
-         * o método não está acessando o valor do produto instanciado
-         * por isso não executado uma subtração corretamente
-         */
 //        System.out.println(cli3.getQntdDinheiro());
 //
 //        try {
