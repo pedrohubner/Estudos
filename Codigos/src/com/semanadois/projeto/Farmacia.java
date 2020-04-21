@@ -32,6 +32,6 @@ public class Farmacia {
 
     @Override
     public String toString() {
-        return " " + nomeProduto + " - R$" + preco;
+        return "\n" + nomeProduto + " - R$" + preco;
     }
 }
