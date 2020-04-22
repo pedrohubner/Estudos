@@ -1,4 +1,5 @@
-package com.semanadois.projeto;
+package com.semanadois.teste;
+
 import java.util.*;
 
 public class AplicativoTele {
@@ -27,13 +28,13 @@ public class AplicativoTele {
         compra.put(cli1, produto13);
 
         Mensagem msg1 = new Mensagem("Bom dia! Confira os descontos do Dorflex para o dia de hoje!");
-        Mensagem msg2 = new Mensagem("Nova atualização do app!");
+        Mensagem msg2 = new Mensagem("\nNova atualização do app!");
 
         msg.add(msg1);
         msg.add(msg2);
 
-        Mensagem aviso1 = new Mensagem("Seu pedido está a caminhon!\nCliente: " + cli1.getNome() + "\nProduto: " +
-                produto13.getPreco() + " - R$" + produto13.getPreco() + "\nForma de pagamento: " +
+        Mensagem aviso1 = new Mensagem("Seu pedido está a caminho!\nCliente: " + cli1.getNome() + "\nProduto: " +
+                produto13.getNomeProduto() + " - R$" + produto13.getPreco() + "\nForma de pagamento: " +
                 cli1.getFormaPagamento());
 
         aviso.push(aviso1);
@@ -71,15 +72,15 @@ public class AplicativoTele {
                 break;
         }
 
-        System.out.println(cli1.getQntdDinheiro());
-
-        try {
-            System.out.println(cli1.comprarProduto(produto12.getPreco()));
-        }catch (Exception e){
-            System.out.println("Não foi possível concluir a compra.");
-        }
-
-        System.out.println(cli1.getQntdDinheiro());
-
+//        System.out.println(cli1.getQntdDinheiro());
+//
+//        try {
+//            System.out.println(cli1.comprarProduto(produto12.getPreco()));
+//        }catch (Exception e){
+//            System.out.println("Não foi possível concluir a compra.");
+//        }
+//
+//        System.out.println(cli1.getQntdDinheiro());
+//
     }
 }
