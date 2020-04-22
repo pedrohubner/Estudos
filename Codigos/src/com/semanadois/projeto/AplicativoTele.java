@@ -21,17 +21,10 @@ public class AplicativoTele {
 
         Cliente cli1 = new Cliente("Marcos", "PoA", "897.651.243-08", "Débito",
                 72.4);
-        Cliente cli2 = new Cliente("Karina", "Eldorado", "098.765.432-10",
-                "Crédito", 85.9);
-        Cliente cli3 = new Cliente("Luana", "Gtí", "012.345.678-90", "Débito",
-                50.6);
 
         clientes.add(cli1);
-        clientes.add(cli2);
-        clientes.add(cli3);
 
         compra.put(cli1, produto13);
-        compra.put(cli2, produto11);
 
         Mensagem msg1 = new Mensagem("Bom dia! Confira os descontos do Dorflex para o dia de hoje!");
         Mensagem msg2 = new Mensagem("Nova atualização do app!");
@@ -39,15 +32,11 @@ public class AplicativoTele {
         msg.add(msg1);
         msg.add(msg2);
 
-        Mensagem aviso1 = new Mensagem("Novo Pedido!\nCliente: " + cli1.getNome() + "\nProduto: " +
+        Mensagem aviso1 = new Mensagem("Seu pedido está a caminhon!\nCliente: " + cli1.getNome() + "\nProduto: " +
                 produto13.getPreco() + " - R$" + produto13.getPreco() + "\nForma de pagamento: " +
                 cli1.getFormaPagamento());
-        Mensagem aviso2 = new Mensagem("\nNovo Pedido!\nCliente: " + cli2.getNome() + "\nProduto: " +
-                produto11.getPreco() + " - R$" + produto11.getPreco() + "\nForma de pagamento: " +
-                cli2.getFormaPagamento());
 
         aviso.push(aviso1);
-        aviso.push(aviso2);
 
         System.out.println("\n===== Aplicativo Farmácia =====\n\nEscolhe uma das opções:\n 1 - Exibir lista " +
                 "de pedidos\n 2 - Exibir lista de produtos\n 3 - Exibir lista de clientes\n " +
@@ -82,15 +71,15 @@ public class AplicativoTele {
                 break;
         }
 
-//        System.out.println(cli3.getQntdDinheiro());
-//
-//        try {
-//            System.out.println(cli3.comprarProduto(produto12.getPreco()));
-//        }catch (Exception e){
-//            System.out.println("Não foi possível concluir a compra.");
-//        }
-//
-//        System.out.println(cli3.getQntdDinheiro());
+        System.out.println(cli1.getQntdDinheiro());
+
+        try {
+            System.out.println(cli1.comprarProduto(produto12.getPreco()));
+        }catch (Exception e){
+            System.out.println("Não foi possível concluir a compra.");
+        }
+
+        System.out.println(cli1.getQntdDinheiro());
 
     }
 }
