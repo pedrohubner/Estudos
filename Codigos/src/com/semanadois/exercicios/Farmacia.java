@@ -1,4 +1,4 @@
-package com.semanadois.teste;
+package com.semanadois.exercicios;
 
 public class Farmacia {
     private String nomeProduto;

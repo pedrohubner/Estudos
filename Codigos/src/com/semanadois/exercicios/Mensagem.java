@@ -1,4 +1,4 @@
-package com.semanadois.teste;
+package com.semanadois.exercicios;
 
 public class Mensagem {
     private String msg;

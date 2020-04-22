@@ -1,4 +1,4 @@
-package com.semanadois.teste;
+package com.semanadois.exercicios;
 
 import java.util.*;
 
@@ -7,8 +7,8 @@ public class AplicativoTele {
         Scanner input = new Scanner(System.in);
 
         List <Farmacia> produtos = new ArrayList<>();
-        Set <Cliente> clientes = new HashSet<>();
-        Map <Cliente, Farmacia> compra = new HashMap<>();
+        Set <Pessoa> pessoas = new HashSet<>();
+        Map <Pessoa, Farmacia> compra = new HashMap<>();
         Queue <Mensagem> msg = new LinkedList<>();
         Stack <Mensagem> aviso = new Stack<>();
 
@@ -20,10 +20,10 @@ public class AplicativoTele {
         produtos.add(produto12);
         produtos.add(produto13);
 
-        Cliente cli1 = new Cliente("Marcos", "PoA", "897.651.243-08", "Débito",
+        Pessoa cli1 = new Pessoa("Marcos", "PoA", "897.651.243-08", "Débito",
                 72.4);
 
-        clientes.add(cli1);
+        pessoas.add(cli1);
 
         compra.put(cli1, produto13);
 
@@ -33,14 +33,14 @@ public class AplicativoTele {
         msg.add(msg1);
         msg.add(msg2);
 
-        Mensagem aviso1 = new Mensagem("Seu pedido está a caminho!\nCliente: " + cli1.getNome() + "\nProduto: " +
+        Mensagem aviso1 = new Mensagem("Seu pedido está a caminho!\nPessoa: " + cli1.getNome() + "\nProduto: " +
                 produto13.getNomeProduto() + " - R$" + produto13.getPreco() + "\nForma de pagamento: " +
                 cli1.getFormaPagamento());
 
         aviso.push(aviso1);
 
         System.out.println("\n===== Aplicativo Farmácia =====\n\nEscolhe uma das opções:\n 1 - Exibir lista " +
-                "de pedidos\n 2 - Exibir lista de produtos\n 3 - Exibir lista de clientes\n " +
+                "de pedidos\n 2 - Exibir lista de produtos\n 3 - Exibir lista de pessoas\n " +
                 "4 - Exibir lista de compras\n 5 - Exibir avisos");
 
         System.out.println("\nSelecione:");
@@ -56,7 +56,7 @@ public class AplicativoTele {
                 break;
 
             case 3:
-                System.out.println(clientes);
+                System.out.println(pessoas);
                 break;
 
             case 4:
