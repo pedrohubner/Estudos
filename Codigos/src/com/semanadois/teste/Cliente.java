@@ -7,7 +7,7 @@ public class Cliente {
     private String formaPagamento;
     private double qntdDinheiro;
 
-    public Cliente(String nome, String endereco, String cpf, String formaPagamento, double troco){
+    public Cliente(String nome, String endereco, String cpf, String formaPagamento, double qntdDinheiro){
         this.nome = nome;
         this.endereco = endereco;
         this.cpf = cpf;
