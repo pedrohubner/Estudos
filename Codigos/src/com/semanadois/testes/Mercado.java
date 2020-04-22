@@ -98,8 +98,8 @@ public class Mercado {
 //
 //        System.out.println(prateleira1);
 //
-//        //Remove elemento da Stack
-//        prateleira1.pop();
+        //Remove elemento da Stack
+        prateleira1.pop();
 //
 //        System.out.println(prateleira1);
 
