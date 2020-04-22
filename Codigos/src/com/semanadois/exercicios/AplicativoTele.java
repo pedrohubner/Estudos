@@ -72,15 +72,18 @@ public class AplicativoTele {
                 break;
         }
 
-//        System.out.println(cli1.getQntdDinheiro());
-//
-//        try {
-//            System.out.println(cli1.comprarProduto(produto12.getPreco()));
-//        }catch (Exception e){
-//            System.out.println("Não foi possível concluir a compra.");
-//        }
-//
-//        System.out.println(cli1.getQntdDinheiro());
-//
+
+        System.out.println("Digite o valor do primeiro número: ");
+        int a = input.nextInt();
+
+        System.out.println("Digite o valor do segundo número: ");
+        int b = input.nextInt();
+
+        try {
+            System.out.println(a + " : " + b + " = " + a/b);
+        }catch (ArithmeticException e){
+            System.out.println("Não foi possível efetuar divisão");
+        }
+
     }
 }
