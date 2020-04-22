@@ -6,7 +6,7 @@ public class JavaMap {
     public static void main(String[] args) throws NullPointerException{
 
         System.out.println("\nLista TreeMap");
-        Map<String, String> map = new TreeMap<>();
+        TreeMap<String, String> map = new TreeMap<>();
 
         map.put("beta", "bu");
         map.put("teste", "teste");
@@ -16,9 +16,9 @@ public class JavaMap {
         System.out.println(map);
 
         //não imprime esses dois pois eles não foram add
-        //em nenhum map
+        //em nenhum map e porque TreeMap não permite chaves do tipo null
         try {
-            System.out.println(map.get(map));
+            System.out.println(map.get(null));
             System.out.println(map.get("outra coisa"));
         }catch (NullPointerException e){
             System.out.println("Não foi possível imprimir esta lista");
@@ -26,7 +26,7 @@ public class JavaMap {
             System.out.println("Não foi possível imprimir esta lista");
         }
 
-        Map<String, String> map2 = new HashMap<>();
+        HashMap<String, String> map2 = new HashMap<>();
 
         map2.put("beta", "bu");
         map2.put(null, "hey");
@@ -38,8 +38,7 @@ public class JavaMap {
 
         System.out.println(map2);
 
-        //não imprime esses dois pois eles não foram add
-        //em nenhum map
+        //imprime somente "null"
         try {
             System.out.println(map2.get(null));
             System.out.println(map2.get("outra coisa"));
@@ -47,7 +46,7 @@ public class JavaMap {
             System.out.println("Não foi possível imprimir esta lista");
         }
 
-        Map<String, String> map3 = new LinkedHashMap<>();
+        LinkedHashMap<String, String> map3 = new LinkedHashMap<>();
 
         map3.put("beta", "bu");
         map3.put("pieta", null);
