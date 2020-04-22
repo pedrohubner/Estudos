@@ -1,13 +1,13 @@
-package com.semanadois.teste;
+package com.semanadois.exercicios;
 
-public class Cliente {
+public class Pessoa {
     private String nome;
     private String endereco;
     private String cpf;
     private String formaPagamento;
     private double qntdDinheiro;
 
-    public Cliente(String nome, String endereco, String cpf, String formaPagamento, double qntdDinheiro){
+    public Pessoa(String nome, String endereco, String cpf, String formaPagamento, double qntdDinheiro){
         this.nome = nome;
         this.endereco = endereco;
         this.cpf = cpf;
@@ -64,7 +64,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "\nCliente: " + nome + "\nEndereço: " + endereco + "\nCPF: " + cpf + "\nForma de pagamento mais " +
+        return "\nPessoa: " + nome + "\nEndereço: " + endereco + "\nCPF: " + cpf + "\nForma de pagamento mais " +
                 "utilizada: " + formaPagamento + "\nSaldo atual: " + qntdDinheiro;
     }
 }
