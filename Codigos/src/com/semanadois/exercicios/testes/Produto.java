@@ -1,4 +1,4 @@
-package com.semanadois.testes;
+package com.semanadois.exercicios.testes;
 
 public class Produto {
 
