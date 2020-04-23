@@ -26,9 +26,12 @@ public class Aula {
 
         m1.divisao();
 
-        Math m2 = () -> System.out.println("Realizando operação de divisão: ");
-
-        m2.divisao();
+        try {
+            Math m2 = () -> System.out.println("4 dividido por 2 é igual a " + 4/2);
+            m2.divisao();
+        }catch (ArithmeticException e){
+            System.out.println("Não foi possível efetuar divisão");
+        }
 
     }
 }
