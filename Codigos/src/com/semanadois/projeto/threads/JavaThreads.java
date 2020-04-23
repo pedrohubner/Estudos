@@ -2,7 +2,6 @@ package com.semanadois.projeto.threads;
 
 interface Foto{
 
-    //Criando método default
     default public void desenhar(){
         int a = 1;
         int b = 2;
@@ -10,9 +9,8 @@ interface Foto{
         System.out.println("Desenhando retângulo de " + a + "cm de altura e " + b + " cm de largura");
     }
 
-    //Criando único método abstrato da interface
+    //Criando único método abstrato
     public void tirarFoto();
-    
 }
 
 public class JavaThreads {
@@ -36,7 +34,7 @@ public class JavaThreads {
 
         foto2.tirarFoto();
 
-        //implementando método default
+        //Implementando método default
         foto2.desenhar();
 
     }
