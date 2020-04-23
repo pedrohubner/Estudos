@@ -1,4 +1,4 @@
-package com.semanadois.projeto.trycatch;
+package com.semanadois.projeto;
 
 import java.util.Scanner;
 
