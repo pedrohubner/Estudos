@@ -1,4 +1,4 @@
-package com.semanadois.testes;
+package com.semanadois.exercicios;
 
 public class Cliente {
     private String nome;

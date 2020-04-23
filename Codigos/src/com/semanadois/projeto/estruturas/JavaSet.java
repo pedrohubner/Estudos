@@ -1,4 +1,4 @@
-package com.semanadois.estruturas;
+package com.semanadois.projeto.estruturas;
 
 import java.util.*;
 
