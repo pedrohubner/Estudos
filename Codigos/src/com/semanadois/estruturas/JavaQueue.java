@@ -11,6 +11,7 @@ public class JavaQueue {
         PriorityQueue <String> nome = new PriorityQueue<>();
 
         nome.add("Naã");
+        nome.add("Naã");
         nome.add("Rio");
 
         System.out.println(nome);
@@ -28,6 +29,8 @@ public class JavaQueue {
 
         nome1.add("Pedro");
         nome1.add("Davi");
+        nome1.add("Davi");
+
 
         System.out.println(nome1);
 
