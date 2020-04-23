@@ -2,6 +2,7 @@ package com.semanadois.projeto.threads;
 
 interface Foto{
 
+    //Criando método default
     default public void desenhar(){
         int a = 1;
         int b = 2;
