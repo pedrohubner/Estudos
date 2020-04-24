@@ -17,11 +17,11 @@ public class AbleToRun implements Runnable {
     }
 
     @Override
-    public void run() {
+    public synchronized void run() {
         for (int i = 0; i < 10; i++) {
             System.out.println("\n" + nome + " está em " + i + " km");
         }{
-            System.out.println("\nDONE! " + nome);
+            System.out.println("\n" + nome + " chegou!");
         }
     }
 }
