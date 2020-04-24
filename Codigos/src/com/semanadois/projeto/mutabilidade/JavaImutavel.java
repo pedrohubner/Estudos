@@ -15,7 +15,7 @@ public final class JavaImutavel {
         return name;
     }
 
-    public int getAge() { 
+    public int getAge() {
         return age;
     }
 
