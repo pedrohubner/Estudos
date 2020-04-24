@@ -1,16 +1,19 @@
-package com.semanatres;
+package com.semanatres.featuresoito;
 
 public interface Math {
 
-    default public void soma(){
-        int a = 1;
-        int b = 1;
+    //Método default
+    default public int soma(){
+        int a = 87;
+        int b = 55;
 
         int soma = a + b;
 
-        System.out.println(soma);
+        System.out.println("\nSoma de 87 + 55 = " + soma);
+        return soma;
     }
 
+    //único método abstrato dessa interface funcional
     public void divisao();
 
 }
