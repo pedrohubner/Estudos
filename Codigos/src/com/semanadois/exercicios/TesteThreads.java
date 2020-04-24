@@ -1,4 +1,4 @@
-package com.semanadois.projeto.threads;
+package com.semanadois.exercicios;
 
 interface Foto{
 
@@ -15,7 +15,7 @@ interface Foto{
     public void tirarFoto();
 }
 
-public class JavaThreads implements Runnable{
+public class TesteThreads implements Runnable{
     public static void main(String[] args) {
 
         //Thread usando lambda expression
