@@ -1,20 +1,25 @@
 package com.semanatres.featuresoito;
 
+import java.util.ArrayList;
+
 public class Aula {
     public static void main(String[] args) throws Exception{
 
-        Aluno a1 = new Aluno("João", 203, 52, 34, true);
-        Aluno a2 = new Aluno("Luciane", 126, 48, 22, true);
-        Aluno a3 = new Aluno("Lauane", 302, 56, 42, true);
-        Aluno a4 = new Aluno("Barbosa", 105, 52, 58, true);
+        /**
+         * EXEMPLOS DE LAMBDA EXPRESSIONS E METHOD REFERENCES
+         */
+        ArrayList <Aluno> boletim = new ArrayList<>();
 
-        //Criando threas para cada aluno
+        Aluno a1 = new Aluno("João", 112, 48, 89, 48, 88, true);
+        Aluno a2 = new Aluno("Luciane", 306, 62, 60, 39, 60, true);
+        Aluno a3 = new Aluno("Luana", 105, 51, 15, 72, 102, true);
+        Aluno a4 = new Aluno("Carl", 203, 89, 35, 99, 20, true);
+
+        //Criando threads para cada aluno e imprimindo usando lambda expression
         Thread t1 = new Thread(() -> System.out.println(a1));
         t1.start();
 
-        a2.trocarDeTurma();
-
-        Thread t2 = new Thread(() -> System.out.println(a2.trocarDeTurma()));
+        Thread t2 = new Thread(() -> System.out.println(a2));
         t2.start();
 
         Thread t3 = new Thread(() -> System.out.println(a3));
@@ -23,15 +28,27 @@ public class Aula {
         Thread t4 = new Thread(() -> System.out.println(a4));
         t4.start();
 
+        boletim.add(a1);
+        boletim.add(a2);
+        boletim.add(a3);
+        boletim.add(a4);
 
-        Math m1 = new Math() {
+        //método da instância de um objeto particular
+        boletim.forEach(Aluno::exibeDados);
+
+
+        /**
+         * Implementando método abstrato 'subtrai' da interface funcional 'OpBasicas'
+         * e preenchendo com dados int de objeto da classe Aluno
+         */
+        OpBasicas m1 = new OpBasicas() {
             @Override
-            public void divisao() {
+            public void subtrai() {
 
                 int a = a4.getNota1();
                 int b = a4.getNota2();
 
-                int div = a / b;
+                int div = a - b;
 
                 System.out.println("\n45 : 5 = " + div);
             }
@@ -39,14 +56,22 @@ public class Aula {
 
         m1.soma();
 
-        m1.divisao();
+        m1.subtrai();
+
+        //método de instância
+        OpBasicas m3 = a1::subtrai;
 
         try {
-            Math m2 = () -> System.out.println("\n4 dividido por 2 é igual a " + a2.getNota1()/a2.getNota2());
-            m2.divisao();
+            /*OpBasicas*/ m1 = () -> System.out.println("\n4 dividido por 2 é igual a " + a2.getNota1()/a2.getNota2());
+            m1.subtrai();
         }catch (ArithmeticException e){
             System.out.println("\nNão foi possível efetuar divisão");
         }
+
+        System.out.println("Multiplicando");
+        OpBasicas m4 = Aluno::multiply;
+        //o método multiply imprime endereço de memória
+        System.out.println(m4);
 
     }
 }
