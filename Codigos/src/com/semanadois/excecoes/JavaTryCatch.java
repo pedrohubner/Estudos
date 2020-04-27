@@ -1,4 +1,4 @@
-package com.semanadois.projeto;
+package com.semanadois.excecoes;
 
 import java.util.Scanner;
 
