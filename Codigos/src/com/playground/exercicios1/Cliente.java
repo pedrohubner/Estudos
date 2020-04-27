@@ -1,4 +1,4 @@
-package com.semanadois.exercicios.playground1;
+package com.playground.exercicios1;
 
 public class Cliente {
     private String nome;
