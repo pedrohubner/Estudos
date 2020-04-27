@@ -1,4 +1,6 @@
-package com.semanadois.exercicios;
+package com.semanadois.exercicios.playground2;
+
+import com.semanadois.exercicios.playground2.Farmacia;
 
 public class Pessoa {
     private String nome;

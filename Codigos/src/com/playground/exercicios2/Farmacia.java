@@ -1,4 +1,4 @@
-package com.semanadois.exercicios;
+package com.semanadois.exercicios.playground2;
 
 public class Farmacia {
     private String nomeProduto;

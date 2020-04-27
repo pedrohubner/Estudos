@@ -1,4 +1,4 @@
-package com.semanadois.projeto.threads;
+package com.semanadois.threads;
 
 public class Teste {
     public static void main(String[] args) throws Exception{

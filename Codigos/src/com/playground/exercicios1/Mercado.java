@@ -1,4 +1,4 @@
-package com.semanadois.exercicios.testes;
+package com.semanadois.exercicios.playground1;
 
 import java.util.*;
 
@@ -7,7 +7,7 @@ public class Mercado {
         Scanner input = new Scanner(System.in);
 
         Set <Produto> produtos = new HashSet<>();
-        Queue < Cliente> clientes = new LinkedList<>();
+        Queue <Cliente> clientes = new LinkedList<>();
         Map <Cliente, Produto> compras = new HashMap<>();
         Stack <Produto> prateleira1 = new Stack<>();
         Stack <Produto> prateleira2 = new Stack<>();
