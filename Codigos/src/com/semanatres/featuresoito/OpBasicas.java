@@ -1,6 +1,6 @@
 package com.semanatres.featuresoito;
 
-public interface Math {
+public interface OpBasicas {
 
     //Método default
     default public int soma(){
@@ -14,6 +14,6 @@ public interface Math {
     }
 
     //único método abstrato dessa interface funcional
-    public void divisao();
+    public void subtrai ();
 
 }
