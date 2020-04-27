@@ -54,6 +54,7 @@ public class Aula {
             }
         };
 
+        //Imprimindo default method de interface funcional OpBasicas
         m1.soma();
 
         m1.subtrai();
