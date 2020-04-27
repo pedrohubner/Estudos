@@ -14,6 +14,6 @@ public interface OpBasicas {
     }
 
     //único método abstrato dessa interface funcional
-    public void subtrai ();
+    public void subtrai();
 
 }
