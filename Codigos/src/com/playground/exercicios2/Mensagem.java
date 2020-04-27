@@ -1,4 +1,4 @@
-package com.semanadois.exercicios.playground2;
+package com.playground.exercicios2;
 
 public class Mensagem {
     private String msg;
