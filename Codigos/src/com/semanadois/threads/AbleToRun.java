@@ -1,4 +1,4 @@
-package com.semanadois.projeto.threads;
+package com.semanadois.threads;
 
 public class AbleToRun implements Runnable {
 
