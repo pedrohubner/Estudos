@@ -1,18 +1,22 @@
 package com.semanatres.featuresoito;
 
-public class Aluno implements Math {
+public class Aluno implements OpBasicas {
 
     private String nome;
     private int turma;
     private int nota1;
     private int nota2;
+    private static int nota3;
+    private static int nota4;
     private boolean pedido;
 
-    public Aluno(String nome, int turma, int nota1, int nota2, boolean pedido){
+    public Aluno(String nome, int turma, int nota1, int nota2, int nota3, int nota4,  boolean pedido){
         this.nome = nome;
         this.turma =  turma;
         this.nota1 = nota1;
         this.nota2 = nota2;
+        this.nota3 = nota3;
+        this.nota4 = nota4;
         this.pedido = pedido;
     }
 
@@ -48,6 +52,22 @@ public class Aluno implements Math {
         this.nota2 = nota2;
     }
 
+    public int getNota3() {
+        return nota3;
+    }
+
+    public void setNota3(int nota3) {
+        this.nota3 = nota3;
+    }
+
+    public int getNota4() {
+        return nota4;
+    }
+
+    public void setNota4(int nota4) {
+        this.nota4 = nota4;
+    }
+
     public boolean isPedido() {
         return pedido;
     }
@@ -56,21 +76,15 @@ public class Aluno implements Math {
         this.pedido = pedido;
     }
 
-    /**
-     * Método com loop, descobrir como consertar
-     * e refazer teste
-     *
-     * @return
-     */
-    public boolean trocarDeTurma(){
-         try {
-             if (pedido == true) {
-                 turma++;
-             }
-         }catch (StackOverflowError e){
-             System.out.println("Não deu certo burro");
-         }
-         return trocarDeTurma();
+    public void exibeDados(){
+        System.out.println("O(a) aluno(a) " + nome + " atingiu a nota final de: " + (nota1 + nota2));
+    }
+
+    public static int multiply(){
+
+        System.out.println(nota3*nota4);
+        return multiply();
+
     }
 
     @Override
@@ -78,21 +92,21 @@ public class Aluno implements Math {
         return "\n" + nome + " da turma " + turma;
     }
 
-    //Implementação do método default da classe Math
+    //Implementação do método default da classe OpBasicas
     @Override
     public int soma() {
 
         return soma();
     }
 
-    //Implementação do método de Math
+    //Implementação do método de OpBasicas
     @Override
-    public void divisao() {
+    public void subtrai() {
 
-        int a = 4;
-        int b = 2;
+        int a = 49;
+        int b = 26;
 
-        int div = a / b;
+        int div = a - b;
 
         System.out.println(div);
 
