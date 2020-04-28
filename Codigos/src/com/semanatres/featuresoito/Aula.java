@@ -69,6 +69,9 @@ public class Aula {
             System.out.println("\nNão foi possível efetuar divisão");
         }
 
+        /**
+         * Falta o endereço de memória para o método multiplygit
+         */
         System.out.println("Multiplicando");
         OpBasicas m4 = Aluno::multiply;
         //o método multiply imprime endereço de memória
