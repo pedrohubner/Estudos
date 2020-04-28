@@ -82,9 +82,7 @@ public class Aluno implements OpBasicas {
 
     public static int multiply(){
 
-        System.out.println(nota3*nota4);
-        return multiply();
-
+        return nota3*nota4;
     }
 
     @Override
@@ -96,7 +94,7 @@ public class Aluno implements OpBasicas {
     @Override
     public int soma() {
 
-        return soma();
+        return nota2 - nota1;
     }
 
     //Implementação do método de OpBasicas
