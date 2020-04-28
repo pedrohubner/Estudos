@@ -49,7 +49,7 @@ public class Estagiario implements Pessoa{
     }
 
     @Override
-    public void dizerOi() {
+    public void dizerOi () {
 
     }
 
