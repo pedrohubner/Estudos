@@ -94,7 +94,7 @@ public class Aluno implements OpBasicas {
     @Override
     public int soma() {
 
-        return nota2 - nota1;
+        return nota2 + nota1;
     }
 
     //Implementação do método de OpBasicas
