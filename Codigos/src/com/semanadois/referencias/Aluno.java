@@ -1,4 +1,4 @@
-package com.semanadois.JavaReference;
+package com.semanadois.referencias;
 
 public class Aluno {
 
