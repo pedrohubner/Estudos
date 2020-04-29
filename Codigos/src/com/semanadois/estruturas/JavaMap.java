@@ -26,6 +26,7 @@ public class JavaMap {
             System.out.println("Não foi possível imprimir esta lista");
         }
 
+        System.out.println("\nLista HashMap");
         HashMap<String, String> map2 = new HashMap<>();
 
         map2.put("beta", "bu");
@@ -33,8 +34,6 @@ public class JavaMap {
         map2.put(null, null);
         map2.put("Alfa", null);
         map2.put("Omega","ou");
-
-        System.out.println("\nLista HashMap");
 
         System.out.println(map2);
 
@@ -46,6 +45,7 @@ public class JavaMap {
             System.out.println("Não foi possível imprimir esta lista");
         }
 
+        System.out.println("\nLista LinkedHashMap");
         LinkedHashMap<String, String> map3 = new LinkedHashMap<>();
 
         map3.put("beta", "bu");
@@ -53,8 +53,6 @@ public class JavaMap {
         map3.put("teste", null);
         map3.put(null, "au");
         map3.put(null,"ou");
-
-        System.out.println("\nLista HashMap");
 
         System.out.println(map3);
 
