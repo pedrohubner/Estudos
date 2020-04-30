@@ -64,7 +64,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "\nPessoa: " + nome + "\nEndereço: " + endereco + "\nCPF: " + cpf + "\nForma de pagamento mais " +
+        return "\nLivro: " + nome + "\nEndereço: " + endereco + "\nCPF: " + cpf + "\nForma de pagamento mais " +
                 "utilizada: " + formaPagamento + "\nSaldo atual: " + qntdDinheiro;
     }
 }
