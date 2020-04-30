@@ -45,6 +45,6 @@ public class Livro implements Cloneable{
 
     @Override
     public String toString() {
-        return revista + " com " + qntdPags+ " páginas. " + edicao + " edição. Idioma: " + idioma;
+        return revista + " com " + qntdPags+ " páginas. " + edicao + " Idioma: " + idioma;
     }
 }
