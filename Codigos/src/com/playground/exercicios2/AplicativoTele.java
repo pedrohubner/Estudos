@@ -33,7 +33,7 @@ public class AplicativoTele {
         msg.add(msg1);
         msg.add(msg2);
 
-        Mensagem aviso1 = new Mensagem("Seu pedido está a caminho!\nPessoa: " + cli1.getNome() + "\nProduto: " +
+        Mensagem aviso1 = new Mensagem("Seu pedido está a caminho!\nLivro: " + cli1.getNome() + "\nProduto: " +
                 produto13.getNomeProduto() + " - R$" + produto13.getPreco() + "\nForma de pagamento: " +
                 cli1.getFormaPagamento());
 
