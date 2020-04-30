@@ -1,38 +1,15 @@
 package com.semanadois.copy;
 
-public class Lancamento implements Cloneable{
+public class HQ implements Cloneable{
 
-    private String dataLancamento;
-    private String name;
     private String edicao;
     private int qntdPags;
-    private double preco;
     private Revista revista;
 
-    public Lancamento(String dataLancamento, String name, String edicao, int qntdPags, double preco, Revista revista){
-        this.dataLancamento = dataLancamento;
-        this.name = name;
+    public HQ(Revista revista, String edicao, int qntdPags){
+        this.revista = revista;
         this.edicao = edicao;
         this.qntdPags = qntdPags;
-        this.preco = preco;
-        this.revista = revista;
-
-    }
-
-    public String getDataLancamento(){
-        return dataLancamento;
-    }
-
-    public void setDataLancamento(String dataLancamento) {
-        this.dataLancamento = dataLancamento;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getEdicao() {
@@ -51,23 +28,22 @@ public class Lancamento implements Cloneable{
         this.qntdPags = qntdPags;
     }
 
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
+    /**
+     * Descobrir porque do (HQ) -> Usando um cast para que o clone seja do tipo HQ
+     * Descobrir porque do super ->
+     *
+     * @return
+     * @throws CloneNotSupportedException
+     */
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        Lancamento novaRevista = (Lancamento) super.clone();
-        novaRevista.revista = (Revista) revista.clone();
-        return novaRevista;
+        HQ novaHQ = (HQ) super.clone();
+        novaHQ.revista = (Revista) revista.clone();
+        return novaHQ;
     }
 
     @Override
     public String toString() {
-        return revista + " será lançada em " + dataLancamento;
+        return revista + " edição " + edicao + " com " + qntdPags + " páginas.";
     }
 }
