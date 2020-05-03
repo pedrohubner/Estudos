@@ -62,20 +62,5 @@ public class Aula {
         //método de instância
         OpBasicas m3 = a1::subtrai;
 
-        try {
-            /*OpBasicas*/ m1 = () -> System.out.println("\n4 dividido por 2 é igual a " + a2.getNota1()/a2.getNota2());
-            m1.subtrai();
-        }catch (ArithmeticException e){
-            System.out.println("\nNão foi possível efetuar divisão");
-        }
-
-        /**
-         * Falta o endereço de memória para o método multiplygit
-         */
-        System.out.println("Multiplicando");
-        OpBasicas m4 = Aluno::multiply;
-        //o método multiply imprime endereço de memória
-        System.out.println(m4);
-
     }
 }
