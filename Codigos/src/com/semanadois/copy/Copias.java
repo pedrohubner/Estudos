@@ -6,35 +6,21 @@ public class Copias {
         /**
          * SHALLOW COPY
          */
-        Revista revista1 = new Revista("Carbono Alterado", 49.9);
-        Revista revista2 = new Revista("Duna", 74.9);
-        Revista revista3 = new Revista("Carbono Alterado", 49.9);
+        Revista revista1 = new Revista("Veja", 6.5);
+        Revista revista2 = new Revista("Época", 7.9);
+        Revista revista3 = new Revista("Guia do Estudante", 9.9);
 
-        Livro livro1 = new Livro(revista1, 400, 2, "Português");
-        Livro livro2 = new Livro(revista2, 642, 6, "Inglês");
+        System.out.println("\n" + revista1);
 
-        System.out.println("\n" + livro1);
+        Revista novaRevista = revista1;
 
-        livro1.setQntdPags(500);
-        livro1.setEdicao(3);
-        livro1.setIdioma("Inglês");
+        novaRevista.setName("Science Daily");
+        novaRevista.setPreco(10.6);
 
-        try {
-            //Criando clone após alterações de livro1
-            Livro novaEdicao = (Livro) livro1.clone();
-            novaEdicao.setIdioma("Espanhol");
-            novaEdicao.setEdicao(4);
-            System.out.println("\n" + novaEdicao);
-        }catch (CloneNotSupportedException e){
-            e.printStackTrace();
-            System.out.println("Não foi possível clonar objeto.");
-        }
-
-        System.out.println(livro1);
-
-        //Após criar clone de livro1 e alterar os dados
-        //o livro1 continua sendo impresso com os mesmos dados
-        //CORRIGIR
+        //novaRevista e revista1 são impressos
+        //com os mesmos dados
+        System.out.println("\n" + novaRevista);
+        System.out.println("\n" + revista1);
 
         /**
          * DEEP COPY
