@@ -2,9 +2,6 @@ package com.semanadois.threads.semaforo;
 
 import java.util.concurrent.Semaphore;
 
-class Arbitro{
-    static int contagem = 0;
-}
 public class Corredor implements Runnable{
 
     Semaphore sem;
@@ -40,9 +37,12 @@ public class Corredor implements Runnable{
 
             System.out.println(nome + " começa a correr\n");
 
-            for (int i = 0; i < 10; i++){
-                Arbitro.contagem++;
-                System.out.println(nome + ":" + Arbitro.contagem + "km");
+            /**
+             * RETIRANDO CLASSE ARBITRO E ATRIBUTO CONTADOR
+             */
+            for (int i = 0; i <= 10; i++){
+
+                System.out.println(nome + ":" + i + "km");
 
                 Thread.sleep(100);
             }
