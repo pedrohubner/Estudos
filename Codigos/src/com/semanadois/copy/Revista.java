@@ -18,6 +18,14 @@ public class Revista implements Cloneable{
         this.name = name;
     }
 
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
     @Override
     protected Object clone() throws CloneNotSupportedException {
             return super.clone();
