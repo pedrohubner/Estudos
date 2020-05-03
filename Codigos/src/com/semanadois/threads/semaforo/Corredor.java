@@ -1,5 +1,7 @@
 package com.semanadois.threads.semaforo;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.concurrent.Semaphore;
 
 public class Corredor implements Runnable{
@@ -37,9 +39,6 @@ public class Corredor implements Runnable{
 
             System.out.println(nome + " começa a correr\n");
 
-            /**
-             * RETIRANDO CLASSE ARBITRO E ATRIBUTO CONTADOR
-             */
             for (int i = 0; i <= 10; i++){
 
                 System.out.println(nome + ":" + i + "km");
