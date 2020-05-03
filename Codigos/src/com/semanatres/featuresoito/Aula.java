@@ -61,6 +61,6 @@ public class Aula {
 
         //método de instância
         OpBasicas m3 = a1::subtrai;
-
+        
     }
 }
