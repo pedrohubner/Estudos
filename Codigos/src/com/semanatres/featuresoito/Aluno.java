@@ -6,8 +6,8 @@ public class Aluno implements OpBasicas {
     private int turma;
     private int nota1;
     private int nota2;
-    private static int nota3;
-    private static int nota4;
+    private int nota3;
+    private int nota4;
     private boolean pedido;
 
     public Aluno(String nome, int turma, int nota1, int nota2, int nota3, int nota4,  boolean pedido){
@@ -80,33 +80,34 @@ public class Aluno implements OpBasicas {
         System.out.println("O(a) aluno(a) " + nome + " atingiu a nota final de: " + (nota1 + nota2));
     }
 
-    public static int multiply(){
-
-        return nota3*nota4;
-    }
-
     @Override
     public String toString() {
-        return "\n" + nome + " da turma " + turma;
+        return  nome + " da turma " + turma;
     }
 
-    //Implementação do método default da classe OpBasicas
+    //Implementação do método abstrato da interface OpBasicas
     @Override
-    public int soma() {
+    public void mediaSem1() {
 
-        return nota2 + nota1;
+        System.out.println(nota2 + nota1 / 2);
     }
 
-    //Implementação do método de OpBasicas
+    //Implementação do método abstrato da interface OpBasicas
     @Override
-    public void subtrai() {
+    public void mediaSem2() {
 
-        int a = 49;
-        int b = 26;
+        System.out.println(nota3 + nota4 / 2);
+    }
 
-        int div = a - b;
+    //Implementação do método abstrato de OpBasicas
+    @Override
+    public void passouDeAno() {
 
-        System.out.println(div);
+        int sem1 = nota1 + nota2 / 2;
+
+        int sem2 = nota3 + nota4 / 2;
+
+        System.out.println(sem1 + sem2 / 2);
 
     }
 
