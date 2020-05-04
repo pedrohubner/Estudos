@@ -1,23 +1,19 @@
 package com.semanatres.featuresoito;
 
-public class Aluno implements OpBasicas {
+public class Aluno {
 
     private String nome;
+    private long matricula;
     private int turma;
-    private int nota1;
-    private int nota2;
-    private int nota3;
-    private int nota4;
-    private boolean pedido;
+    private int notaSemestre1;
+    private int notaSemestre2;
 
-    public Aluno(String nome, int turma, int nota1, int nota2, int nota3, int nota4,  boolean pedido){
+    public Aluno(String nome, long matricula, int turma, int notaSemestre1, int notaSemestre2){
         this.nome = nome;
+        this.matricula = matricula;
         this.turma =  turma;
-        this.nota1 = nota1;
-        this.nota2 = nota2;
-        this.nota3 = nota3;
-        this.nota4 = nota4;
-        this.pedido = pedido;
+        this.notaSemestre1 = notaSemestre1;
+        this.notaSemestre2 = notaSemestre2;
     }
 
     public String getNome() {
@@ -28,6 +24,14 @@ public class Aluno implements OpBasicas {
         this.nome = nome;
     }
 
+    public long getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(long matricula) {
+        this.matricula = matricula;
+    }
+
     public int getTurma() {
         return turma;
     }
@@ -36,79 +40,37 @@ public class Aluno implements OpBasicas {
         this.turma = turma;
     }
 
-    public int getNota1() {
-        return nota1;
+    public int getNotaSemestre1() {
+        return notaSemestre1;
     }
 
-    public void setNota1(int nota1) {
-        this.nota1 = nota1;
+    public void setNotaSemestre1(int notaSemestre1) {
+        this.notaSemestre1 = notaSemestre1;
     }
 
-    public int getNota2() {
-        return nota2;
+    public int getNotaSemestre2() {
+        return notaSemestre2;
     }
 
-    public void setNota2(int nota2) {
-        this.nota2 = nota2;
+    public void setNotaSemestre2(int notaSemestre2) {
+        this.notaSemestre2 = notaSemestre2;
     }
 
-    public int getNota3() {
-        return nota3;
-    }
+    public void passouDeAno(){
+        int soma = notaSemestre1 + notaSemestre2 / 2;
 
-    public void setNota3(int nota3) {
-        this.nota3 = nota3;
-    }
-
-    public int getNota4() {
-        return nota4;
-    }
-
-    public void setNota4(int nota4) {
-        this.nota4 = nota4;
-    }
-
-    public boolean isPedido() {
-        return pedido;
-    }
-
-    public void setPedido(boolean pedido) {
-        this.pedido = pedido;
+        if (soma >= 60){
+            System.out.println(nome + " passou de ano.\nNota: " + soma);
+        }else System.out.println(nome + " reprovou de ano.");
     }
 
     public void exibeDados(){
-        System.out.println("O(a) aluno(a) " + nome + " atingiu a nota final de: " + (nota1 + nota2));
+        System.out.println("Aluno(a) " + nome + "(" + matricula + ") da turma " + turma + ".");
     }
 
     @Override
     public String toString() {
         return  nome + " da turma " + turma;
-    }
-
-    //Implementação do método abstrato da interface OpBasicas
-    @Override
-    public void mediaSem1() {
-
-        System.out.println(nota2 + nota1 / 2);
-    }
-
-    //Implementação do método abstrato da interface OpBasicas
-    @Override
-    public void mediaSem2() {
-
-        System.out.println(nota3 + nota4 / 2);
-    }
-
-    //Implementação do método abstrato de OpBasicas
-    @Override
-    public void passouDeAno() {
-
-        int sem1 = nota1 + nota2 / 2;
-
-        int sem2 = nota3 + nota4 / 2;
-
-        System.out.println(sem1 + sem2 / 2);
-
     }
 
 }
