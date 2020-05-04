@@ -34,33 +34,35 @@ public class Aula {
         boletim.add(a4);
 
         //método da instância de um objeto particular
+
+
         boletim.forEach(Aluno::exibeDados);
 
 
-        /**
-         * Implementando método abstrato 'subtrai' da interface funcional 'OpBasicas'
-         * e preenchendo com dados int de objeto da classe Aluno
-         */
-        OpBasicas m1 = new OpBasicas() {
-            @Override
-            public void subtrai() {
-
-                int a = a4.getNota1();
-                int b = a4.getNota2();
-
-                int div = a - b;
-
-                System.out.println("\n45 : 5 = " + div);
-            }
-        };
-
-        //Imprimindo default method de interface funcional OpBasicas
-        m1.soma();
-
-        m1.subtrai();
-
-        //método de instância
-        OpBasicas m3 = a1::subtrai;
+//        /**
+//         * Implementando método abstrato 'subtrai' da interface funcional 'OpBasicas'
+//         * e preenchendo com dados int de objeto da classe Aluno
+//         */
+//        OpBasicas m1 = new OpBasicas() {
+//            @Override
+//            public void media() {
+//
+//                int a = a4.getNota1();
+//                int b = a4.getNota2();
+//
+//                int div = a - b;
+//
+//                System.out.println("\n45 : 5 = " + div);
+//            }
+//        };
+//
+//        //Imprimindo default method de interface funcional OpBasicas
+//        m1.soma();
+//
+//        m1.media();
+//
+//        //método de instância
+//        OpBasicas m3 = a1::media;
         
     }
 }
