@@ -23,5 +23,6 @@ public class Beta2 {
         System.out.println(p1.dizerTchau());
 
         e1.expediente();
+
     }
 }
