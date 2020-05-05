@@ -5,8 +5,6 @@ public class ArquivoUm {
 
         GerenciadorDeArquivos g1 = new GerenciadorDeArquivos();
 
-        g1.criarArquivo();
-
         g1.EscreverArquivo();
 
         g1.LerArquivo();

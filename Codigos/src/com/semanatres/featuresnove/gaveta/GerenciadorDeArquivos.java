@@ -11,7 +11,11 @@ public class GerenciadorDeArquivos {
         return nome;
     }
 
-//    public void criarArquivo(){
+    public Scanner getConteudo() {
+        return conteudo;
+    }
+
+    //    public void criarArquivo(){
 //
 //        System.out.println("Digite o nome do arquivo: ");
 //        File file = new File(nome.next());
