@@ -17,7 +17,7 @@ public class NewFile {
         }
 
         //Escrevendo no arquivo
-        String data = "Conteúdo arquivo";
+        String data = "\nConteúdo arquivo:\n- Tópico";
 
         try {
             FileWriter output = new FileWriter("arq.txt");
@@ -30,8 +30,6 @@ public class NewFile {
         } catch (IOException e){}
 
         //Lendo arquivo
-        char[] array = new char[16];
-
         try (BufferedReader br = new BufferedReader(new FileReader("arq.txt"))){
             String arquivo =  br.readLine();
             while (arquivo != null){
