@@ -1,12 +1,24 @@
 package com.semanatres.featuresnove.gaveta;
 
-public class ArquivoUm {
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Arquivos {
     public static void main(String[] args) {
 
-        GerenciadorDeArquivos g1 = new GerenciadorDeArquivos();
+        Map <String, String> lista = Map.of("Banana", "Limão");
+        List <String> lista2 = List.of("Jaqueta", "Camiseta", "Calça");
+        Set <String> lista3 = Set.of("Meia", "Tênis");
 
-        g1.EscreverArquivo();
+        for (String f : lista2){
+            System.out.println(f);
+        }
 
-        g1.LerArquivo();
+//        GerenciadorDeArquivos g1 = new GerenciadorDeArquivos();
+//
+//        g1.EscreverArquivo();
+//
+//        g1.LerArquivo();
     }
 }
