@@ -41,11 +41,14 @@ public class NewFile {
 
         }catch (IOException e){}
 
-        try (FileReader file1 = new FileReader("arq.txt")){
-            System.out.println(file1.read());
+        try (BufferedReader br = new BufferedReader(new FileReader("arq.txt"))){
+            String arquivo =  br.readLine();
+            while (arquivo != null){
+                System.out.println(arquivo);
+                arquivo = br.readLine();
+            }
         }catch (IOException e){
             e.getStackTrace();
-            e.printStackTrace();
         }
     }
 }
