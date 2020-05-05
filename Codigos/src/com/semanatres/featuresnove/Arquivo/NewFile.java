@@ -5,9 +5,9 @@ import java.io.*;
 public class NewFile {
     public static void main(String[] args) {
 
+        //Criando arquivo
         File file = new File("arq.txt");
 
-        //Criando arquivo
         try {
             boolean value = file.createNewFile();
             if (value){
@@ -16,9 +16,9 @@ public class NewFile {
         }catch (IOException e){
         }
 
+        //Escrevendo no arquivo
         String data = "Conteúdo arquivo";
 
-        //Escrevendo no arquivo
         try {
             FileWriter output = new FileWriter("arq.txt");
 
@@ -29,9 +29,9 @@ public class NewFile {
             output.close();
         } catch (IOException e){}
 
+        //Lendo arquivo
         char[] array = new char[16];
 
-        //Lendo arquivo
         try {
             FileReader input = new FileReader("arq.txt");
 
