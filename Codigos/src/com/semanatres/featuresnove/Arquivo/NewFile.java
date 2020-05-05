@@ -32,15 +32,6 @@ public class NewFile {
         //Lendo arquivo
         char[] array = new char[16];
 
-        try {
-            FileReader input = new FileReader("arq.txt");
-
-            input.read(array);
-//            System.out.println("\narq.txt: ");
-//            System.out.println(array);
-
-        }catch (IOException e){}
-
         try (BufferedReader br = new BufferedReader(new FileReader("arq.txt"))){
             String arquivo =  br.readLine();
             while (arquivo != null){
