@@ -49,6 +49,10 @@ public class Produtos {
             return qntdDisponivel;
     }
 
+    public int reporEstoque(){
+        return qntdDisponivel + 1;
+    }
+
     @Override
     public String toString() {
         return nome + " custa " + preco + " e possui " + qntdDisponivel + " em estoque.";
