@@ -16,6 +16,9 @@ public class Arquivos {
         }
 
         GerenciadorDeArquivos g1 = new GerenciadorDeArquivos();
+
+        g1.criarArquivo("Teste.txt");
+
         g1.escreverArquivo("Teste.txt");
     }
 }
