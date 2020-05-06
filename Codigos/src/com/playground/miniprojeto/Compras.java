@@ -15,9 +15,9 @@ public class Compras {
         Produtos produto2 = new Produtos("Shampoo Rexona", 5.3, 17, loja1);
         Produtos produto3 = new Produtos("Shampoo Clear", 7.6, 12, loja1);
 
-        Produtos produto4 = new Produtos("Shampoo Axe", 8.5, 20, loja2);
-        Produtos produto5 = new Produtos("Shampoo Rexona", 5.3, 17, loja2);
-        Produtos produto6 = new Produtos("Shampoo Clear", 7.6, 12, loja2);
+        Produtos produto4 = new Produtos("Shampoo Dove", 8.5, 0, loja2);
+        Produtos produto5 = new Produtos("Shampoo Pantene", 5.3, 17, loja2);
+        Produtos produto6 = new Produtos("Shampoo Head & Sholder's", 7.6, 12, loja2);
 
         //Produtos loja 1
         listaProdutos.add(produto1);
@@ -29,9 +29,7 @@ public class Compras {
         listaProdutos2.add(produto5);
         listaProdutos2.add(produto6);
 
-        listaProdutos.forEach(Produtos::comprarProduto);
-
-
+        System.out.println(produto4.comprarProduto());
 
     }
 }
