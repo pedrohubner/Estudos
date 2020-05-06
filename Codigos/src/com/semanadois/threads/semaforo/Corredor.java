@@ -50,7 +50,7 @@ public class Corredor implements Runnable{
         }catch (InterruptedException e){
             e.printStackTrace();
         } finally {
-            System.out.println("Pátio vazio");
+            System.out.println("Estádio vazio");
             sem.release();
         }
 
