@@ -15,10 +15,7 @@ public class Arquivos {
             System.out.println(f);
         }
 
-//        GerenciadorDeArquivos g1 = new GerenciadorDeArquivos();
-//
-//        g1.EscreverArquivo();
-//
-//        g1.LerArquivo();
+        GerenciadorDeArquivos g1 = new GerenciadorDeArquivos();
+        g1.escreverArquivo("Teste.txt");
     }
 }
