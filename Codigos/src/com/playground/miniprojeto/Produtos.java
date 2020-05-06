@@ -3,11 +3,11 @@ package com.playground.miniprojeto;
 public class Produtos {
 
     private String nome;
-    private double preco;
-    private int qntdDisponivel;
+    private Double preco;
+    private Integer qntdDisponivel;
     private Loja loja;
 
-    public Produtos(String nome, double preco, int qntdDisponivel, Loja loja){
+    public Produtos(String nome, Double preco, Integer qntdDisponivel, Loja loja){
         this.nome = nome;
         this.preco = preco;
         this.qntdDisponivel = qntdDisponivel;
@@ -26,7 +26,7 @@ public class Produtos {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
@@ -34,7 +34,7 @@ public class Produtos {
         return qntdDisponivel;
     }
 
-    public void setQntdDisponivel(int qntdDisponivel) {
+    public void setQntdDisponivel(Integer qntdDisponivel) {
         this.qntdDisponivel = qntdDisponivel;
     }
 
@@ -42,10 +42,11 @@ public class Produtos {
         return loja;
     }
 
-    public void comprarProduto(){
-        if (qntdDisponivel > 0){
-            System.out.println("Produto " + nome + " - Quantidade em estoque: "+ (qntdDisponivel - 1));
-        }else System.out.println("Produto não disponível");
+    public int comprarProduto(){
+        if (qntdDisponivel > 0)
+            return qntdDisponivel - 1;
+        else
+            return qntdDisponivel;
     }
 
     @Override
