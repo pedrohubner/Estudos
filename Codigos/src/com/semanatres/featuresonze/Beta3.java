@@ -1,18 +1,38 @@
 package com.semanatres.featuresonze;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.stream.Collectors;
+
 public class Beta3 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        String nomes = "Pedro\nNaã\nHübner";
-        System.out.println(nomes);
+        String nomes = "Java\n11\nFeatures";
+        String endereco = " Casmurro ";
 
-        //Verificando se a String tá vazia
-        System.out.println(nomes.isBlank());
+        System.out.println("\nString está vazia? " + nomes.isBlank());
 
-        //Transformando string em uma coleção(uma lista)
-        nomes.lines()
-                .map(n -> "/" + nomes)
-                .forEach(System.out::println);
+        System.out.print("\nDom");
+        System.out.print(endereco.strip());
+        System.out.println("55");
+
+        System.out.print("\nDom");
+        System.out.print(endereco.stripTrailing());
+        System.out.println("55");
+
+        System.out.print("\nDom");
+        System.out.print(endereco.stripLeading());
+        System.out.println("55");
+
+        System.out.println("\n" + nomes.lines().collect(Collectors.toList()));
+
+        //TODO implementar sintaxa de inferência de variável com lambda e writeString e readString
+
+        Path path = new Files.writeString(Files.createTempFile("arq", ".txt"), "corpo");
+        System.out.println(path);
+        String s = Files.readString(path);
+        System.out.println(s);
 
     }
 }
