@@ -27,9 +27,9 @@ public class Beta3 {
 
         System.out.println("\n" + nomes.lines().collect(Collectors.toList()));
 
-        //TODO implementar sintaxa de inferência de variável com lambda e writeString e readString
+        //TODO implementar sintaxa de inferência de variável com lambda
 
-        Path path = new Files.writeString(Files.createTempFile("arq", ".txt"), "corpo");
+        Path path = Files.writeString(Files.createTempFile("arquivo", ".txt"), "Conteúdo arquivo");
         System.out.println(path);
         String s = Files.readString(path);
         System.out.println(s);
