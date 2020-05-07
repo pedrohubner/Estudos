@@ -3,6 +3,7 @@ package com.semanatres.featuresonze;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Beta3 {
@@ -11,6 +12,7 @@ public class Beta3 {
         String nomes = "Java\n11\nFeatures";
         String endereco = " Casmurro ";
 
+        //Novos métodos String
         System.out.println("\nString está vazia? " + nomes.isBlank());
 
         System.out.print("\nDom");
@@ -27,12 +29,20 @@ public class Beta3 {
 
         System.out.println("\n" + nomes.lines().collect(Collectors.toList()));
 
-        //TODO implementar sintaxa de inferência de variável com lambda
-
+        //Usando String para ler e escrever arquivos
         Path path = Files.writeString(Files.createTempFile("arquivo", ".txt"), "Conteúdo arquivo");
         System.out.println(path);
         String s = Files.readString(path);
         System.out.println(s);
+
+        //Exemplo de inferência de tipo com expressão lambda
+        Function <Integer, Integer> fgs = (var n) -> n + 2;
+
+        Integer pleaseFGS = fgs.apply(2);
+
+        System.out.println(pleaseFGS);
+
+
 
     }
 }
