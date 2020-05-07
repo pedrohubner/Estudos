@@ -20,5 +20,7 @@ public class Biblioteca {
         var setNomes = Set.of("- Samuel Meister Hübner", "- Davi Arthur Hübner");
         setNomes.forEach(System.out::println);
 
+        //TODO Adicionar exemplo garbage collector e versionamento com data
+
     }
 }
