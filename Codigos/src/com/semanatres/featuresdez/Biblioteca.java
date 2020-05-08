@@ -8,8 +8,6 @@ import java.util.Set;
 public class Biblioteca {
     public static void main(String[] args) {
 
-        var num = 20;
-
         System.out.println("\nSérie A:");
 
         var time1 = "- Internacional";
