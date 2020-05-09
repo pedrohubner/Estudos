@@ -1,19 +1,17 @@
 package com.semanatres.featuresoito;
 
-public class Aluno {
+public class Aluno implements Conselho{
 
     private String nome;
-    private long matricula;
-    private int turma;
-    private int notaSemestre1;
-    private int notaSemestre2;
+    private Long matricula;
+    private Integer turma;
+    private Integer notaFinal;
 
-    public Aluno(String nome, long matricula, int turma, int notaSemestre1, int notaSemestre2){
+    public Aluno(String nome, Long matricula, Integer turma, Integer notaFinal){
         this.nome = nome;
         this.matricula = matricula;
         this.turma =  turma;
-        this.notaSemestre1 = notaSemestre1;
-        this.notaSemestre2 = notaSemestre2;
+        this.notaFinal = notaFinal;
     }
 
     public String getNome() {
@@ -40,32 +38,16 @@ public class Aluno {
         this.turma = turma;
     }
 
-    public int getNotaSemestre1() {
-        return notaSemestre1;
+    public Integer getNotaFinal(){
+        return notaFinal;
     }
 
-    public void setNotaSemestre1(int notaSemestre1) {
-        this.notaSemestre1 = notaSemestre1;
+    public void setNotaFinal(Integer notaFinal){
+        this.notaFinal = notaFinal;
     }
 
-    public int getNotaSemestre2() {
-        return notaSemestre2;
-    }
-
-    public void setNotaSemestre2(int notaSemestre2) {
-        this.notaSemestre2 = notaSemestre2;
-    }
-
-    public void passouDeAno(){
-        int soma = notaSemestre1 + notaSemestre2 / 2;
-
-        if (soma >= 60){
-            System.out.println(nome + " passou de ano.\nNota: " + soma);
-        }else System.out.println(nome + " reprovou de ano.");
-    }
-
-    public void exibeDados(){
-        System.out.println("Aluno(a) " + nome + "(" + matricula + ") da turma " + turma + ".");
+    public String exibeDados(){
+        return "Aluno(a) " + nome + "(" + matricula + ") da turma " + turma + ".";
     }
 
     @Override
@@ -73,4 +55,11 @@ public class Aluno {
         return  nome + " da turma " + turma;
     }
 
+    @Override
+    public String verificarAprovacao() {
+        if (notaFinal >= 6){
+            return nome + " foi aprovado. Nota final: " + notaFinal ;
+        }else
+            return nome + " foi reprovado. Nota final: " + notaFinal ;
+    }
 }
