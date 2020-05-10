@@ -6,6 +6,14 @@ import java.util.Scanner;
 public class GerenciadorDeArquivos {
     private Scanner nome = new Scanner(System.in);
 
+    public Scanner getNome() {
+        return nome;
+    }
+
+    public void setNome(Scanner nome) {
+        this.nome = nome;
+    }
+
     public String criarArquivo(String nomeArquivo) {
         try {
             File file = new File(nomeArquivo);
