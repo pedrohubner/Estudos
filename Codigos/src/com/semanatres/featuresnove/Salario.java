@@ -1,21 +1,18 @@
 package com.semanatres.featuresnove;
 
+public interface Salario {
 
-public interface Pessoa {
-
-    private String dizerOi() {
-        return "Oi, tudo bem?";
+    default String entrarSalario(int a, int salario){
+        ganharBonus(a, salario);
+        return "Salário entrou. Valor depositado: R$" + (a + salario);
     }
 
-    private String dizerTchau() {
-        return "Até mais, se cuida!";
+    private Integer ganharBonus(int a, int salario){
+        if (a < salario && a != 0) {
+            System.out.println("Este mês os funcionários ganharão um bônus");
+            return a + salario;
+        }
+        return a;
     }
 
-    default String chegarNoTrabalho() {
-        return dizerOi();
-    }
-
-    default String irEmbora() {
-        return dizerTchau();
-    }
 }
