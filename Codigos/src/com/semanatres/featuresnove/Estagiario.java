@@ -1,12 +1,12 @@
 package com.semanatres.featuresnove;
 
-public class Estagiario implements Pessoa{
+public class Estagiario implements Salario{
 
     private String nome;
     private int idade;
-    private boolean trabalhando = true;
+    private boolean trabalhando;
 
-    public Estagiario(String nome, int idade, boolean trabalhando){
+    public Estagiario(String nome, int idade, boolean trabalhando) {
         this.nome = nome;
         this.idade = idade;
         this.trabalhando = trabalhando;
@@ -36,25 +36,10 @@ public class Estagiario implements Pessoa{
         this.trabalhando = trabalhando;
     }
 
-    public void expediente(){
-
-        if(!trabalhando){
-            System.out.println(nome + " está no trabalho.");
-        }else System.out.println(nome + " voltou pra casa.");
-    }
-
-    @Override
-    public String dizer() {
-        return null;
-    }
-
-    @Override
-    public void dizerOi () {
-
-    }
-
-    @Override
-    public String dizerTchau() {
-        return null;
+    public String expediente() {
+        if (trabalhando)
+            return nome + " está no trabalho.";
+        else
+            return nome + " voltou pra casa.";
     }
 }
