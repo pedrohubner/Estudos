@@ -1,6 +1,4 @@
-package com.playground.tarefa;
-
-import com.playground.tarefa.Engrenagem;
+package com.playground.tarefa1;
 
 public class Relogio {
     public static void main(String[] args) {
