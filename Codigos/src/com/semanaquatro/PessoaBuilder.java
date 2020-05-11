@@ -1,6 +1,6 @@
 package com.semanaquatro;
 
- class PessoaBuilder {
+public class PessoaBuilder {
 
     private Pessoa pessoa;
     private Endereco endereco;
