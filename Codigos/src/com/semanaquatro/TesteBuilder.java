@@ -1,16 +1,16 @@
 package com.semanaquatro;
 
-public class TesteBuilder {
+ class PessoaBuilder {
 
     private Pessoa pessoa;
     private Endereco endereco;
 
-    public TesteBuilder(){
+    public PessoaBuilder(){
         this.pessoa = new Pessoa();
         this.endereco = new Endereco();
     }
 
-    public static TesteBuilder pessoa(){
-        return new TesteBuilder();
+    public static PessoaBuilder pessoa(){
+        return new PessoaBuilder();
     }
 }
