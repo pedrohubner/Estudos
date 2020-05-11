@@ -48,16 +48,17 @@ public class GerenciadorDeArquivos {
         }
     }
 
-    public void lerArquivo(String nomeArquivo) {
+    public void lerArquivo(String nomeArquivo) throws IOException{
 
-        try (BufferedReader br = new BufferedReader(new FileReader(criarArquivo(nomeArquivo)))) {
+        File file = new File(criarArquivo(nomeArquivo));
+        BufferedReader br = new BufferedReader(new FileReader(file));
+
+        try (br) {
             String arquivo = br.readLine();
             while (arquivo != null) {
                 System.out.println(arquivo);
                 arquivo = br.readLine();
             }
-        } catch (IOException e) {
-            e.getStackTrace();
         }
     }
 }
