@@ -1,4 +1,4 @@
-package com.playground.tarefa;
+package com.playground.tarefa1;
 
 public class Engrenagem {
 
@@ -20,7 +20,6 @@ public class Engrenagem {
 
     public String cronometrar(){
         try {
-
             Thread.sleep(1000);
             s++;
 
@@ -35,7 +34,7 @@ public class Engrenagem {
             return String.format("%02d:%02d:%02d \n", h, m, s);
 
         } catch (Exception e) {
-            return "Deu bad";
+            return "Erro ao executar cronômetro.";
         }
     }
 }
