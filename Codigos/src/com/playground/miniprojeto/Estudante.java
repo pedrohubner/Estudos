@@ -60,4 +60,9 @@ public class Estudante {
         int somaNotas = (nota1 + nota2) / 2;
         return somaNotas;
     }
+
+    @Override
+    public String toString() {
+        return nome + " - ID: " + matricula;
+    }
 }
