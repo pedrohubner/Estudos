@@ -26,6 +26,7 @@ public class Estudando {
         System.out.println("==Portal Acadêmico==\n===Menu===:\n 1 - Lista de alunos\n 2 - Média final do bimestre" +
                 "\n 3 - Var com lambda");
         System.out.println("\nSeleciona a opção desejada:");
+
         int escolha = input.nextInt();
 
         switch (escolha) {
@@ -37,27 +38,11 @@ public class Estudando {
             case 2:
                 System.out.println("=====Média final do bimestre=====");
                 if (e1.verificarAprovacaoBimestre() >= 6) {
-                    System.out.println(e1.getNome().concat(" passou no bimestre. Nota final: ") +
-                            e1.verificarAprovacaoBimestre());
-                    System.out.println(e2.getNome().concat(" passou no bimestre. Nota final: ") +
-                            e2.verificarAprovacaoBimestre());
-                    System.out.println(e3.getNome().concat(" passou no bimestre. Nota final: ") +
-                            e3.verificarAprovacaoBimestre());
-                    System.out.println(e4.getNome().concat(" passou no bimestre. Nota final: ") +
-                            e4.verificarAprovacaoBimestre());
-                    System.out.println(e5.getNome().concat(" passou no bimestre. Nota final: ") +
-                            e5.verificarAprovacaoBimestre());
+                    listaEstudantes.forEach(e -> System.out.println(e.getNome().concat(" passou no bimestre. " +
+                            "Nota final: ") + e.verificarAprovacaoBimestre()));
                 } else {
-                    System.out.println(e1.getNome() + " reprovou no bimestre. Nota final: " +
-                            e1.verificarAprovacaoBimestre());
-                    System.out.println(e2.getNome() + " reprovou no bimestre. Nota final: " +
-                            e2.verificarAprovacaoBimestre());
-                    System.out.println(e3.getNome() + " reprovou no bimestre. Nota final: " +
-                            e3.verificarAprovacaoBimestre());
-                    System.out.println(e4.getNome() + " reprovou no bimestre. Nota final: " +
-                            e4.verificarAprovacaoBimestre());
-                    System.out.println(e5.getNome() + " reprovou no bimestre. Nota final: " +
-                            e5.verificarAprovacaoBimestre());
+                    listaEstudantes.forEach(e -> System.out.println(e.getNome().concat(" reprovou no bimestre. " +
+                            "Nota final: ") + e.verificarAprovacaoBimestre()));
                 }
                 break;
 
