@@ -4,7 +4,7 @@ public class Leitura {
     public static void main(String[] args) {
 
         Blog blog = new BlogBuilder()
-                .addTitulo("Testando Builder")
+                .addTitulo("Blog Builder")
                 .addPublicacao( "Pensamentos de estagiários", "Estagiário",
                         "13/05/20", "Puutz")
                 .get();
@@ -12,11 +12,11 @@ public class Leitura {
         //System.out.println(blog);
 
         Revista revista = new RevistaBuilder()
-                .addTitulo("Época")
+                .addTitulo("Revista Builder")
                 .addPreco(8.5)
-                .addEditora("Abril")
+                .addEditora("Dimed")
                 .addQntdPaginas(30)
-                .addPublicacao( "Pensamentos de um Ex-Ministro", "Sérgio Moro",
+                .addPublicacao( "Builder Pattern como opção", "PNH",
                         "12/04/20", "Valeu, rapaziada!")
                 .get();
 
