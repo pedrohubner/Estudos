@@ -1,4 +1,4 @@
-package com.semanaquatro;
+package com.semanaquatro.builder;
 
 public class Beta4 {
     public static void main(String[] args) {

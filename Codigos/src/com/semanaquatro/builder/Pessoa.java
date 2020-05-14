@@ -1,4 +1,4 @@
-package com.semanaquatro;
+package com.semanaquatro.builder;
 
 public class Pessoa {
 

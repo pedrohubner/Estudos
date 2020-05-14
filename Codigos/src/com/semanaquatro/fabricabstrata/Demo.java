@@ -1,10 +1,10 @@
-package com.playground.fabricabstrata;
+package com.semanaquatro.fabricabstrata;
 
-import com.playground.fabricabstrata.cliente.ApertarBotao;
-import com.playground.fabricabstrata.fabrica.FabricaControle;
-import com.playground.fabricabstrata.fabrica.FabricaControlePortao;
-import com.playground.fabricabstrata.fabrica.FabricaControleTV;
-import com.playground.fabricabstrata.fabrica.FabricaControleVideoGame;
+import com.semanaquatro.fabricabstrata.cliente.ApertarBotao;
+import com.semanaquatro.fabricabstrata.fabrica.FabricaControle;
+import com.semanaquatro.fabricabstrata.fabrica.FabricaControlePortao;
+import com.semanaquatro.fabricabstrata.fabrica.FabricaControleTV;
+import com.semanaquatro.fabricabstrata.fabrica.FabricaControleVideoGame;
 
 public class Demo {
 
