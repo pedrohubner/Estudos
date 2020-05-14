@@ -1,4 +1,8 @@
 package com.playground.fabricabstrata.fabrica;
 
-public class FabricaControle {
+import com.playground.fabricabstrata.projeto.Controle;
+
+public interface FabricaControle {
+
+    Controle criarBotao();
 }
