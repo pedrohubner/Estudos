@@ -1,4 +1,4 @@
-package com.semanaquatro.decorando;
+package com.semanaquatro.decorator;
 
 public class MeuQuarto {
     public static void main(String[] args) {
