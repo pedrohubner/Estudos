@@ -1,4 +1,4 @@
-package com.semanaquatro.decorando;
+package com.semanaquatro.decorator;
 
 public class Roupeiro extends DecoracaoQuarto {
 
@@ -8,8 +8,7 @@ public class Roupeiro extends DecoracaoQuarto {
 
     @Override
     public String decorar() {
-        quarto.decorar();
-        return addRoupeiro();
+        return quarto.decorar() + "\n" + addRoupeiro();
     }
 
     private String addRoupeiro(){
