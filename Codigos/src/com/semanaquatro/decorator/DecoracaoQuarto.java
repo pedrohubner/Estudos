@@ -2,13 +2,14 @@ package com.semanaquatro.decorando;
 
 public class DecoracaoQuarto extends Quarto {
 
-    protected Quarto quarto;
+    Quarto quarto;
 
-    public DecoracaoQuarto(Quarto quarto){
+    DecoracaoQuarto(Quarto quarto){
         this.quarto = quarto;
     }
 
     @Override
-    public void decorar() {
+    public String decorar() {
+        return null;
     }
 }
