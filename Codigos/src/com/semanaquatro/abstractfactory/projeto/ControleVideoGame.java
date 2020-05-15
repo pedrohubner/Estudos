@@ -1,4 +1,4 @@
-package com.semanaquatro.fabricabstrata.projeto;
+package com.semanaquatro.abstractfactory.projeto;
 
 public class ControleVideoGame implements Controle {
 

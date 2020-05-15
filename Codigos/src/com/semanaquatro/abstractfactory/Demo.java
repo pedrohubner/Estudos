@@ -1,10 +1,10 @@
-package com.semanaquatro.fabricabstrata;
+package com.semanaquatro.abstractfactory;
 
-import com.semanaquatro.fabricabstrata.cliente.ApertarBotao;
-import com.semanaquatro.fabricabstrata.fabrica.FabricaControle;
-import com.semanaquatro.fabricabstrata.fabrica.FabricaControlePortao;
-import com.semanaquatro.fabricabstrata.fabrica.FabricaControleTV;
-import com.semanaquatro.fabricabstrata.fabrica.FabricaControleVideoGame;
+import com.semanaquatro.abstractfactory.cliente.ApertarBotao;
+import com.semanaquatro.abstractfactory.fabrica.FabricaControle;
+import com.semanaquatro.abstractfactory.fabrica.FabricaControlePortao;
+import com.semanaquatro.abstractfactory.fabrica.FabricaControleTV;
+import com.semanaquatro.abstractfactory.fabrica.FabricaControleVideoGame;
 
 public class Demo {
 

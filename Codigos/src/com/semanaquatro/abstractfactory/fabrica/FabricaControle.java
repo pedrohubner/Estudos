@@ -1,6 +1,6 @@
-package com.semanaquatro.fabricabstrata.fabrica;
+package com.semanaquatro.abstractfactory.fabrica;
 
-import com.semanaquatro.fabricabstrata.projeto.Controle;
+import com.semanaquatro.abstractfactory.projeto.Controle;
 
 public interface FabricaControle {
 

@@ -1,7 +1,7 @@
-package com.semanaquatro.fabricabstrata.fabrica;
+package com.semanaquatro.abstractfactory.fabrica;
 
-import com.semanaquatro.fabricabstrata.projeto.Controle;
-import com.semanaquatro.fabricabstrata.projeto.ControlePortao;
+import com.semanaquatro.abstractfactory.projeto.Controle;
+import com.semanaquatro.abstractfactory.projeto.ControlePortao;
 
 public class FabricaControlePortao implements FabricaControle {
 

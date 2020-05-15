@@ -1,4 +1,4 @@
-package com.semanaquatro.ponte;
+package com.semanaquatro.bridge;
 
 public class Beta6 {
     public static void main(String[] args) {

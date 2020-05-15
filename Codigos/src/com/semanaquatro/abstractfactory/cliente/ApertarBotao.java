@@ -1,7 +1,7 @@
-package com.semanaquatro.fabricabstrata.cliente;
+package com.semanaquatro.abstractfactory.cliente;
 
-import com.semanaquatro.fabricabstrata.fabrica.FabricaControle;
-import com.semanaquatro.fabricabstrata.projeto.Controle;
+import com.semanaquatro.abstractfactory.fabrica.FabricaControle;
+import com.semanaquatro.abstractfactory.projeto.Controle;
 
 public class ApertarBotao {
 
