@@ -1,9 +1,9 @@
-package com.semanaquatro.strategy;
+package com.semanaquatro.strategy.comunicacao;
 
 public class LatidoAlerta implements Latido {
 
     @Override
-    public void latir() {
-        System.out.println("Cachorro fazendo latido de alerta");
+    public String latir() {
+        return " fazendo latido de alerta";
     }
 }
