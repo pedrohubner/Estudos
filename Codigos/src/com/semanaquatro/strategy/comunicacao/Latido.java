@@ -1,6 +1,6 @@
-package com.semanaquatro.strategy;
+package com.semanaquatro.strategy.comunicacao;
 
 public interface Latido {
 
-    public void latir();
+    String latir();
 }
