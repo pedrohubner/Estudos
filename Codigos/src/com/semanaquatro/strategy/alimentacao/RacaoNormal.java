@@ -1,9 +1,9 @@
-package com.semanaquatro.strategy;
+package com.semanaquatro.strategy.alimentacao;
 
 public class RacaoNormal implements Comida {
 
     @Override
-    public void comer() {
-        System.out.println("Cachorro está comendo sua ração normal");
+    public String comer() {
+        return " comendo sua ração normal";
     }
 }
