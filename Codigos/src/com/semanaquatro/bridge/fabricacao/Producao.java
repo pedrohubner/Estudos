@@ -4,6 +4,6 @@ public class Producao implements Produto {
 
     @Override
     public String produzir() {
-        return null;
+        return " produzido";
     }
 }
