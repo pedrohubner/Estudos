@@ -1,9 +1,9 @@
 package com.semanaquatro.strategy.alimentacao;
 
-public class RacaoComProteina implements Racao {
+public class RacaoMaisProteina implements Comida {
 
     @Override
-    public void comer() {
-        System.out.println(" comendo ração com proteína extra.");
+    public String comer() {
+        return " comendo ração com proteína extra.";
     }
 }
