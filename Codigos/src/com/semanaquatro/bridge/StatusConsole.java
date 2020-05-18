@@ -6,7 +6,7 @@ import com.semanaquatro.bridge.comercio.Xseries;
 import com.semanaquatro.bridge.fabricacao.Lancamento;
 import com.semanaquatro.bridge.fabricacao.Producao;
 
-public class Beta6 {
+public class StatusConsole {
     public static void main(String[] args) {
 
         Console console1 = new Ps5(new Producao(), new Lancamento());
