@@ -1,6 +1,6 @@
 package com.semanaquatro.strategy.alimentacao;
 
-public interface Racao {
+public interface Comida {
 
-    public void comer();
+    String comer();
 }
