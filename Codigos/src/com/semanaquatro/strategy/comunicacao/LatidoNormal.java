@@ -1,9 +1,9 @@
-package com.semanaquatro.strategy;
+package com.semanaquatro.strategy.comunicacao;
 
 public class LatidoNormal implements Latido {
 
     @Override
-    public void latir() {
-        System.out.println("Cachorro fazendo latido normal");
+    public String latir() {
+        return " fazendo latido normal";
     }
 }
