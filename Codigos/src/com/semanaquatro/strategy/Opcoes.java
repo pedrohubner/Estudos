@@ -14,18 +14,6 @@ public abstract class Opcoes {
         return valor;
     }
 
-    public void setValor(double valor){
-        this.valor = valor;
-    }
-
-    public String getDestinatario(){
-        return destinatario;
-    }
-
-    public void setDestinatario(String destinatario){
-        this.destinatario = destinatario;
-    }
-
     protected String notaFiscal(){
         return "Destinatário: " + destinatario + "\nValor: " + valor;
     }
