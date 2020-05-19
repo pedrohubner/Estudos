@@ -1,36 +1,35 @@
 package com.semanaquatro.strategy;
 
-public class Airbnb extends Opcoes {
+public class CartaoCredito extends Opcoes {
 
-    public Airbnb(boolean arCondicionado, boolean estacionamento, boolean camaCasal, boolean internet, int custo){
-        super(arCondicionado, estacionamento, camaCasal, internet, custo);
+    private int parcelas;
+    private int numeroCartao;
+    private String bandeira;
+
+    CartaoCredito(double valor, String destinatario, int parcelas, int numeroCartao, String bandeira) {
+        super(valor, destinatario);
+        this.parcelas = parcelas;
+        this.numeroCartao = numeroCartao;
+        this.bandeira = bandeira;
+    }
+
+    private String quantidadeParcelas(){
+        if (parcelas <= 10 && parcelas != 0)
+            return "Contexto parcelado em " + parcelas + "x. Valor mensal: " + (getValor() / parcelas);
+        else if (parcelas >= 11 && parcelas <= 12){
+            return "Contexto parcelado em " + parcelas + "x. Valor mensal com juros: " +
+                    (getValor() / parcelas + 10.0);
+        }
+        else
+            return "Opcção não disponível";
     }
 
     @Override
-    public void terArCondicionado() {
-        if (isArCondicionado()){
-            System.out.println("Este quarto tem ar-condicionado");
-        }else System.out.println("Este quarto não tem ar-condicionado");
-    }
-
-    @Override
-    public void terCamaCasal() {
-        if (isCamaCasal()){
-            System.out.println("Este quarto tem cama de casal");
-        }else System.out.println("Este quarto tem cama de solteiro");
-    }
-
-    @Override
-    public void terEstacionamento() {
-        if (isEstacionamento()){
-            System.out.println("Tem estacionamento");
-        } else System.out.println("Não tem estacionamento");
-    }
-
-    @Override
-    public void terInternet() {
-        if (isInternet()){
-            System.out.println("Tem internet");
-        }else System.out.println("Não tem internet");
+    protected String notaFiscal() {
+        return "====Cartão Crédito===="
+        + "\nNúmero cartão: " + numeroCartao
+        + "\nBandeira: " + bandeira
+        + "\n" + super.notaFiscal()
+        + "\n" + quantidadeParcelas();
     }
 }
