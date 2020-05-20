@@ -1,6 +1,6 @@
 package com.semanaquatro.chain;
 
-public class Main {
+public class Notification {
     public static void main(String[] args) {
 
         EmailNotification emailNotification = new EmailNotification(null);
