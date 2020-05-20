@@ -2,7 +2,7 @@ package com.semanaquatro.chain;
 
 public class SMSNotification extends HandlerNotificacao {
 
-    public SMSNotification(HandlerNotificacao msg) {
+    SMSNotification(HandlerNotificacao msg) {
         super(msg);
     }
 
