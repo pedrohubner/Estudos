@@ -2,8 +2,8 @@ package com.semanaquatro.facade;
 
 public class Site {
 
-    private Menu client;
-    private Menu product;
+    private Client client;
+    private Product product;
 
     public Site() {
         client = new Client("Pedro", "Hübner", "20/11/2001", 1234567890L);
