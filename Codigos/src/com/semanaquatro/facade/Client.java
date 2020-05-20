@@ -1,6 +1,6 @@
 package com.semanaquatro.facade;
 
-public class Client extends Menu {
+public class Client {
 
     private String nome;
     private String sobrenome;
@@ -30,7 +30,6 @@ public class Client extends Menu {
         return cpf;
     }
 
-    @Override
     public String perfilCliente() {
         return "=====Perfil cliente====="
         + "\nNome: " + nome + " " + sobrenome
