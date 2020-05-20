@@ -1,6 +1,6 @@
 package com.semanaquatro.facade;
 
-public class Product extends Menu {
+public class Product {
 
     private String produto;
     private double preco;
@@ -18,7 +18,6 @@ public class Product extends Menu {
         this.preco = preco;
     }
 
-    @Override
     public String listaProdutos() {
         return "===Lista Produtos==="
                 + "\nProduto: " + produto
