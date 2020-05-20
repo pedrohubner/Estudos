@@ -1,10 +1,12 @@
 package com.semanaquatro.facade;
 
-public class Main {
+public class Search {
     public static void main(String[] args) {
 
-        Site novoSite = new Site();
+        Site site = new Site();
 
-        System.out.println(novoSite.exibirPerfil());
+        System.out.println(site.exibirPerfil());
+
+        System.out.println(site.exibirPerfil());
     }
 }
