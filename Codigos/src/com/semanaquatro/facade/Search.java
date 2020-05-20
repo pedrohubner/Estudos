@@ -6,7 +6,5 @@ public class Search {
         Site site = new Site();
 
         System.out.println(site.exibirPerfil());
-
-        System.out.println(site.exibirPerfil());
     }
 }
