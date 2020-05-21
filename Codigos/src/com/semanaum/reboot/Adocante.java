@@ -1,6 +1,6 @@
-package com.semanaum.refazendo;
+package com.semanaum.reboot;
 
 public interface Adocante {
 
-    public String adicionarAdocante(int colheresAdocante);
+    String adicionarAdocante();
 }
