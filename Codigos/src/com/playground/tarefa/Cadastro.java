@@ -9,7 +9,7 @@ public class Cadastro {
         System.out.println("====Cadastro cidade====");
 
         System.out.println("Digite o nome da cidade: ");
-        String nomeCidade = input.next();
+        String nomeCidade = input.nextLine();
 
         Cidade cidade = new Cidade(nomeCidade);
 
@@ -27,9 +27,6 @@ public class Cadastro {
         Estudante estudante = new Estudante(nomeEstudante, matricula, senha, novaSenha, cidade);
 
         System.out.println(cidade + "\n" + estudante);
-
-        System.out.println("Deseja atualizar a senha?\n Sim - 1\n Não - 0");
-        
     }
 
     public static void main(String[] args) {
@@ -57,8 +54,6 @@ public class Cadastro {
 
                 do {
                     realizarCadastroCidade();
-
-                    System.out.println("Deseja at");
 
                     System.out.println("\nDeseja cadastrar outra cidade e outros estudantes?"
                             + "\nSim - 1;\nNão - 0.");
