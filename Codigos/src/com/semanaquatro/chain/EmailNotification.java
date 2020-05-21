@@ -2,7 +2,7 @@ package com.semanaquatro.chain;
 
 public class EmailNotification extends HandlerNotificacao {
 
-    public EmailNotification(HandlerNotificacao msg) {
+    EmailNotification(HandlerNotificacao msg) {
         super(msg);
     }
 

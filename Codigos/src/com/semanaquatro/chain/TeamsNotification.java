@@ -1,6 +1,6 @@
 package com.semanaquatro.chain;
 
-public class TeamsNotification extends HandlerNotificacao{
+public class TeamsNotification extends HandlerNotificacao {
 
     TeamsNotification(HandlerNotificacao msg) {
         super(msg);

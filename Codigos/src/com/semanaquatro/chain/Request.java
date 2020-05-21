@@ -4,11 +4,11 @@ public class Request {
 
     private String tipoMensagem;
 
-    public Request(String tipoMensagem) {
+    Request(String tipoMensagem) {
         this.tipoMensagem = tipoMensagem;
     }
 
-    public String getTipoMensagem() {
+    String getTipoMensagem() {
         return tipoMensagem;
     }
 
