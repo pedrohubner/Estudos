@@ -1,4 +1,4 @@
-package com.semanaum;
+package com.semanaum.projeto;
 
 public interface Adocar {
   
