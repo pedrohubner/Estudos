@@ -1,18 +1,21 @@
-package com.semanaum.refazendo;
+package com.semanaum.reboot;
 
-public class CafeAcucar extends Coffee implements Acucar{
+public class CafeAcucar extends Coffee implements Acucar {
 
-    public CafeAcucar(boolean chaleira) {
+    private int colheresAcucar;
+
+    CafeAcucar(boolean chaleira, int colheresAcucar) {
         super(chaleira);
+        this.colheresAcucar = colheresAcucar;
     }
 
     @Override
     protected String fazerCafe(int colheresCafe, double litrosAgua) {
-        return super.fazerCafe(colheresCafe, litrosAgua) + adicionarAcucar(2);
+        return super.fazerCafe(colheresCafe, litrosAgua) + adicionarAcucar();
     }
 
     @Override
-    public String adicionarAcucar(int colheresAcucar) {
-        return "Adicionar " + colheresAcucar + " colheres de açucar no café.";
+    public String adicionarAcucar() {
+        return "\nE adicionar " + colheresAcucar + " colheres de açucar no café.";
     }
 }
