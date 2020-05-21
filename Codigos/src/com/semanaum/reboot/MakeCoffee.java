@@ -1,6 +1,6 @@
 package com.semanaum.reboot;
 
-public class beta9 {
+public class MakeCoffee {
     public static void main(String[] args) {
 
         Coffee novoCafe = new CafeAdocante(false, 2);
