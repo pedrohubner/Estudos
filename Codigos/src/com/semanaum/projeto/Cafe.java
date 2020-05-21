@@ -1,4 +1,4 @@
-package com.semanaum;
+package com.semanaum.projeto;
 
 public abstract class Cafe implements Adocar {
 
