@@ -8,21 +8,17 @@ public class Estudantes {
     private String nome;
     private String dataNascimento;
     private String email;
-    private String senhaAntiga;
-    private String senhaNova;
-    private String confirmarNovaSenha;
+    private String senha;
     private Cidades cidade;
 
-    Estudantes(int codigoAluno, String nome, String dataNascimento, String email, String senhaAntiga,
-               String senhaNova, String confirmarNovaSenha, Cidades cidade) {
+    Estudantes(int codigoAluno, String nome, String dataNascimento, String email, String senha,
+               Cidades cidade) {
 
         this.codigoAluno = codigoAluno;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.email = email;
-        this.senhaAntiga = senhaAntiga;
-        this.senhaNova = senhaNova;
-        this.confirmarNovaSenha = confirmarNovaSenha;
+        this.senha = senha;
         this.cidade = cidade;
         cidade.addNovoEstudante();
     }
@@ -43,8 +39,12 @@ public class Estudantes {
         return dataNascimento;
     }
 
-    public String getSenhaAntiga() {
-        return senhaAntiga;
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public String getEmail() {
@@ -81,7 +81,7 @@ public class Estudantes {
         System.out.println("Digite o novo email: ");
         String setEmail = input.nextLine();
 
-        if (!setEmail.equals(email) && setEmail != null) {
+        if (!setEmail.equals(email)) {
             System.out.println("Email alterado com sucesso");
 
             email = setEmail;
@@ -92,12 +92,12 @@ public class Estudantes {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Digite a nova senha: ");
-        senhaNova = input.nextLine();
+        String novaSenha = input.nextLine();
 
         System.out.println("Confirme a nova senha: ");
-        confirmarNovaSenha = input.nextLine();
+        String confirmarNovaSenha = input.nextLine();
 
-        if (senhaNova.equals(confirmarNovaSenha)) {
+        if (!novaSenha.equals(senha)) {
             System.out.println("\nSenha atualizada com sucesso!\n" + exibeDados());
         } else {
             System.out.println("\nERRO: AS SENHAS NÃO CONFEREM!\nTente novamente:");
@@ -120,36 +120,35 @@ public class Estudantes {
             int decisao = input.nextInt();
             input.nextLine();
 
-            if (decisao == 1) {
+            switch (decisao) {
+                case 1:
+                    alterarNome();
+                    exibeDados();
+                    alterarDados(cidade);
+                    break;
 
-                alterarNome();
-                exibeDados();
-                alterarDados(cidade);
+                case 2:
 
-            } else if (decisao == 2) {
+                    alterarEmail();
+                    exibeDados();
+                    alterarDados(cidade);
+                    break;
 
-                alterarEmail();
-                exibeDados();
-                alterarDados(cidade);
+                case 3:
 
-            } else if (decisao == 3) {
+                    alterarSenha();
+                    exibeDados();
+                    alterarDados(cidade);
+                    break;
 
-                alterarSenha();
-                exibeDados();
-                alterarDados(cidade);
-
-            } else System.out.println("Opção não disponível");
+                default:
+                    System.out.println("Opção não disponível");
+            }
         }
     }
 
     private String exibeDados() {
         return "\nCidade: " + cidade.getDescricao() + "\nEstudante: " + nome +
                 "\nMatrícula: " + codigoAluno + "\nEmail: " + email;
-    }
-
-    @Override
-    public String toString() {
-        return nome + " aluno da Faculdade TAL (código: " + codigoAluno + ") faz seu curso na modalidade " +
-                "EAD, devido à " + " distância do polo.";
     }
 }
