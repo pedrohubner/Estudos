@@ -2,30 +2,36 @@ package com.playground.tarefa;
 
 public class Cidades {
 
-    protected int codigo;
-    protected String descricao;
-    protected String uf;
+    private int codigo;
+    private String descricao;
+    private String uf;
+    private int qntdEstudantes;
 
-    protected Cidades(int codigo, String descricao, String uf){
+    Cidades(int codigo, String descricao, String uf, int qntdEstudantes) {
         this.codigo = codigo;
         this.descricao = descricao;
         this.uf = uf;
+        this.qntdEstudantes = qntdEstudantes;
     }
 
-    public int getCodigo(){
+    protected int getCodigo() {
         return codigo;
     }
 
-    public String getDescricao(){
+    protected String getDescricao() {
         return descricao;
     }
 
-    public String getUf(){
+    protected String getUf() {
         return uf;
     }
 
-    public void exibeDados(){
-        System.out.println("A cidade " + descricao + ", do estado " + uf);
+    public String exibeDados() {
+        return "A cidade " + descricao + ", do estado " + uf;
+    }
+
+    public int getQntdEstudantes() {
+        return qntdEstudantes;
     }
 
     @Override
@@ -33,6 +39,6 @@ public class Cidades {
         return descricao;
     }
 
-    public void addNovoEstudante() {
+    void addNovoEstudante() {
     }
 }
