@@ -142,34 +142,6 @@ public class Estudantes {
         }
     }
 
-    public void cadastrarEstudante() {
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("\n===Cadastro estudante da cidade " +
-                cidade.getDescricao() + "===");
-
-        System.out.println("Digite o código do estudante:");
-        int codigoAluno = input.nextInt();
-        input.nextLine();
-        System.out.println("Digite o nome do estudante:");
-        String nome = input.nextLine();
-        System.out.println("Digite a data de nascimento do estudante:");
-        String dataNascimento = input.next();
-        System.out.println("Digite o email do estudante:");
-        String email = input.next();
-        System.out.println("Digite a senha do estudante:");
-        String senha = input.next();
-        String senhaNova = null;
-        String confirmarNovaSenha = null;
-
-        Estudantes estudante = new Estudantes(codigoAluno, nome, dataNascimento, email, senha,
-                senhaNova, confirmarNovaSenha, cidade);
-
-        estudante.alterarDados(cidade);
-        System.out.println("Cidade: " + cidade.getDescricao() + "\nEstudante: " + estudante.getNome() +
-                "\nMatrícula: " + estudante.getCodigoAluno() + "\nEmail: " + estudante.getEmail());
-    }
-
     private String exibeDados() {
         return "\nCidade: " + cidade.getDescricao() + "\nEstudante: " + nome +
                 "\nMatrícula: " + codigoAluno + "\nEmail: " + email;
