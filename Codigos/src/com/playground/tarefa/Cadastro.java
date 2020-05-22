@@ -40,8 +40,7 @@ public class Cadastro {
                     dataNascimento, email, senha, cidade);
 
             estudante.alterarDados(cidade);
-            System.out.println("Cidade: " + cidade.getDescricao() + "\nEstudante: " + estudante.getNome() +
-                    "\nMatrícula: " + estudante.getCodigoAluno() + "\nEmail: " + estudante.getEmail());
+            MensagensDaTela.exibirDadosCadastro(cidade, estudante);
         }
     }
 
@@ -49,43 +48,40 @@ public class Cadastro {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("===Cadastro cidade===\n 1 - Cadastro cidade e estudante;" +
-                "\n 0 - Encerrar operação.");
+        MensagensDaTela.mensagemInicial();
 
         System.out.println("Digite a opção desejada: ");
         int escolha = input.nextInt();
 
         switch (escolha) {
             case 0:
-                System.out.println("Operação encerrada.");
+                MensagensDaTela.terminarOperacao();
                 System.exit(0);
                 break;
 
             case 1:
                 realizarCadastroCidade();
 
-                System.out.println("\nDeseja cadastrar outra cidade e outros estudantes?"
-                        + "\nSim - 1;\nNão - 0.\nDigite a opção desejada:");
+                MensagensDaTela.mensagemNovoCadastro();
 
                 int decisao = input.nextInt();
 
                 while (decisao == 1) {
                     realizarCadastroCidade();
 
-                    System.out.println("\nDeseja cadastrar outra cidade e outros estudantes?"
-                            + "\nSim - 1;\nNão - 0.");
+                    MensagensDaTela.mensagemNovoCadastro();
 
                     decisao = input.nextInt();
                 }
 
                 if (decisao == 0) {
-                    System.out.println("Operação encerrada");
+                    MensagensDaTela.terminarOperacao();
                 } else
-                    System.out.println("Operação não disponível");
+                    MensagensDaTela.selecionarOpcaoIndisponivel();
                 break;
 
             default:
-                System.out.println("Operação não disponível.");
+                MensagensDaTela.selecionarOpcaoIndisponivel();
                 break;
         }
     }
