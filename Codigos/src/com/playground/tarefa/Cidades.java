@@ -1,6 +1,6 @@
 package com.playground.tarefa;
 
-public class Cidades {
+class Cidades {
 
     private int codigo;
     private String descricao;
@@ -14,29 +14,24 @@ public class Cidades {
         this.qntdEstudantes = qntdEstudantes;
     }
 
-    protected int getCodigo() {
+    int getCodigo() {
         return codigo;
     }
 
-    protected String getDescricao() {
+    String getDescricao() {
         return descricao;
     }
 
-    protected String getUf() {
+    String getUf() {
         return uf;
     }
 
-    public String exibeDados() {
+    String exibeDados() {
         return "A cidade " + descricao + ", do estado " + uf;
     }
 
-    public int getQntdEstudantes() {
+    int getQntdEstudantes() {
         return qntdEstudantes;
-    }
-
-    @Override
-    public String toString() {
-        return descricao;
     }
 
     void addNovoEstudante() {
