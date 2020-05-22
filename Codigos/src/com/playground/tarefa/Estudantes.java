@@ -65,7 +65,7 @@ public class Estudantes {
         System.out.println("Digite o novo nome: ");
         String setNome = input.nextLine();
 
-        if (!setNome.equals(nome)&& setNome != null) {
+        if (!setNome.equals(nome)) {
             System.out.println("Nome alterado com sucesso");
 
             nome = setNome;
@@ -97,7 +97,7 @@ public class Estudantes {
         System.out.println("Confirme a nova senha: ");
         String confirmarNovaSenha = input.nextLine();
 
-        if (!novaSenha.equals(senha)) {
+        if (novaSenha.equals(confirmarNovaSenha)) {
             System.out.println("\nSenha atualizada com sucesso!\n" + exibeDados());
         } else {
             System.out.println("\nERRO: AS SENHAS NÃO CONFEREM!\nTente novamente:");
@@ -109,42 +109,50 @@ public class Estudantes {
     void alterarDados(Cidades cidade) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("\n" + getNome() + ", deseja atualizar algum dado?\nSim - 1\nNão - 0");
-        System.out.println("\nSelecione a opção desejada");
+        MensagensDaTela.atualizarDados(nome);
         int escolha = input.nextInt();
         input.nextLine();
 
         if (escolha == 1) {
-            System.out.println("Seleciona o dado que você deseja alterar:\n 1 - nome;" +
-                    "\n 2 - email;\n 3 - senha.");
+            MensagensDaTela.selecionarDadoAlteracao();
             int decisao = input.nextInt();
             input.nextLine();
 
             switch (decisao) {
                 case 1:
-                    alterarNome();
-                    exibeDados();
-                    alterarDados(cidade);
+                    alterandoNome();
                     break;
 
                 case 2:
-
-                    alterarEmail();
-                    exibeDados();
-                    alterarDados(cidade);
+                    alterandoEmail();
                     break;
 
                 case 3:
-
-                    alterarSenha();
-                    exibeDados();
-                    alterarDados(cidade);
+                    alterandoSenha();
                     break;
 
                 default:
-                    System.out.println("Opção não disponível");
+                    MensagensDaTela.selecionarOpcaoIndisponivel();
             }
         }
+    }
+
+    private void alterandoSenha() {
+        alterarSenha();
+        exibeDados();
+        alterarDados(cidade);
+    }
+
+    private void alterandoNome() {
+        alterarNome();
+        exibeDados();
+        alterarDados(cidade);
+    }
+
+    private void alterandoEmail() {
+        alterarEmail();
+        exibeDados();
+        alterarDados(cidade);
     }
 
     private String exibeDados() {
