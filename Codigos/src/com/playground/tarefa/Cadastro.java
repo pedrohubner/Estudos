@@ -8,77 +8,38 @@ public class Cadastro {
 
         System.out.println("====Cadastro cidade====");
 
-        System.out.println("Digite o nome da cidade: ");
-        String nomeCidade = input.nextLine();
+        System.out.println("Digite o código da cidade:");
+        int codigo = input.nextInt();
+        input.nextLine();
+        System.out.println("Digite o nome da cidade:");
+        String descricao = input.nextLine();
+        System.out.println("Digite o estado da cidade:");
+        String uf = input.nextLine();
 
-        Cidade cidade = new Cidade(nomeCidade);
+        Cidades cidade = new Cidades(codigo, descricao, uf);
 
         System.out.println("\n===Cadastro estudante da cidade " +
-                cidade.getNomeCidade() + "===");
+                cidade.getDescricao() + "===");
 
-        System.out.println("Digite o nome do(a) estudante:");
-        String nomeEstudante = input.next();
-        System.out.println("Digite a matrícula do(a) estudante:");
-        int matricula = input.nextInt();
-        System.out.println("Digite a senha:");
+        System.out.println("Digite o código do estudante:");
+        int codigoAluno = input.nextInt();
+        input.nextLine();
+        System.out.println("Digite o nome do estudante:");
+        String nome = input.nextLine();
+        System.out.println("Digite a data de nascimento do estudante:");
+        String dataNascimento = input.next();
+        System.out.println("Digite o email do estudante:");
+        String email = input.next();
+        System.out.println("Digite a senha do estudante:");
         String senha = input.next();
-        String novaSenha = null;
+        String senhaNova = null;
+        String confirmarNovaSenha = null;
 
-        Estudante estudante = new Estudante(nomeEstudante, matricula, senha, novaSenha, cidade);
+        Estudantes estudante = new Estudantes(codigoAluno, nome, dataNascimento, email, senha, senhaNova,
+                confirmarNovaSenha, cidade);
 
-        System.out.println(cidade + "\n" + estudante);
-
-        System.out.println("\n===Cadastro estudante da cidade " +
-                cidade.getNomeCidade() + "===");
-
-        System.out.println("Digite o nome do(a) estudante:");
-        String nomeEstudante2 = input.next();
-        System.out.println("Digite a matrícula do(a) estudante:");
-        int matricula2 = input.nextInt();
-        System.out.println("Digite a senha:");
-        String senha2 = input.next();
-        String novaSenha2 = null;
-
-        Estudante estudante2 = new Estudante(nomeEstudante2, matricula2, senha2, novaSenha2, cidade);
-
-        System.out.println(cidade + "\n" + estudante2);
-
-        System.out.println("\n===Cadastro estudante da cidade " +
-                cidade.getNomeCidade() + "===");
-
-        System.out.println("Digite o nome do(a) estudante:");
-        String nomeEstudante3 = input.next();
-        System.out.println("Digite a matrícula do(a) estudante:");
-        int matricula3 = input.nextInt();
-        System.out.println("Digite a senha:");
-        String senha3 = input.next();
-        String novaSenha3 = null;
-
-        Estudante estudante3 = new Estudante(nomeEstudante3, matricula3, senha3, novaSenha3, cidade);
-
-        System.out.println(cidade + "\n" + estudante3);
-
-        System.out.println("\n===Cadastro estudante da cidade " +
-                cidade.getNomeCidade() + "===");
-
-        System.out.println("Digite o nome do(a) estudante:");
-        String nomeEstudante4 = input.next();
-        System.out.println("Digite a matrícula do(a) estudante:");
-        int matricula4 = input.nextInt();
-        System.out.println("Digite a senha:");
-        String senha4 = input.next();
-        String novaSenha4 = null;
-
-        Estudante estudante4 = new Estudante(nomeEstudante4, matricula4, senha4, novaSenha4, cidade);
-
-        System.out.println(cidade + "\n" + estudante4);
-
-        System.out.println("Lista de alunos da cidade " + nomeCidade);
-
-        System.out.println(nomeEstudante);
-        System.out.println(nomeEstudante2);
-        System.out.println(nomeEstudante3);
-        System.out.println(nomeEstudante4);
+        estudante.alterarSenha(cidade);
+        System.out.println(cidade.descricao + "\n" + estudante.getNome() + "\n" + estudante.getCodigoAluno());
     }
 
     public static void main(String[] args) {
@@ -102,17 +63,26 @@ public class Cadastro {
                 System.out.println("\nDeseja cadastrar outra cidade e outros estudantes?"
                         + "\nSim - 1;\nNão - 0.");
 
-                int decisao;
+                int decisao = input.nextInt();
 
-                do {
+//                do {
+//                    realizarCadastroCidade();
+//
+//                    System.out.println("\nDeseja cadastrar outra cidade e outros estudantes?"
+//                            + "\nSim - 1;\nNão - 0.");
+//
+//                    decisao = input.nextInt();
+//
+//                } while (decisao == 1);
+
+                while (decisao == 1) {
                     realizarCadastroCidade();
 
                     System.out.println("\nDeseja cadastrar outra cidade e outros estudantes?"
                             + "\nSim - 1;\nNão - 0.");
 
                     decisao = input.nextInt();
-
-                } while (decisao == 1);
+                }
 
                 if (decisao == 0) {
                     System.out.println("Operação encerrada");
