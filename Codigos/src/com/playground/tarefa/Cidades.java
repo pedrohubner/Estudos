@@ -2,10 +2,10 @@ package com.playground.tarefa;
 
 class Cidades {
 
-    private int codigo;
-    private String descricao;
-    private String uf;
-    private int qntdEstudantes;
+    protected int codigo;
+    protected String descricao;
+    protected String uf;
+    protected int qntdEstudantes;
 
     Cidades(int codigo, String descricao, String uf, int qntdEstudantes) {
         this.codigo = codigo;
