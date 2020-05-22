@@ -36,8 +36,8 @@ public class Cadastro {
             String senhaNova = null;
             String confirmarNovaSenha = null;
 
-            Estudantes estudante = new Estudantes(codigoAluno, nome, dataNascimento, email, senha,
-                    senhaNova, confirmarNovaSenha, cidade);
+            Estudantes estudante = new Estudantes(codigoAluno, nome,
+                    dataNascimento, email, senha, cidade);
 
             estudante.alterarDados(cidade);
             System.out.println("Cidade: " + cidade.getDescricao() + "\nEstudante: " + estudante.getNome() +
@@ -46,6 +46,7 @@ public class Cadastro {
     }
 
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
         System.out.println("===Cadastro cidade===\n 1 - Cadastro cidade e estudante;" +
