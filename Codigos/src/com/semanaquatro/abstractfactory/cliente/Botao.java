@@ -3,15 +3,15 @@ package com.semanaquatro.abstractfactory.cliente;
 import com.semanaquatro.abstractfactory.fabrica.FabricaControle;
 import com.semanaquatro.abstractfactory.projeto.Controle;
 
-public class ApertarBotao {
+public class Botao {
 
     private Controle controle;
 
-    public ApertarBotao(FabricaControle fabrica) {
-        controle = fabrica.criarBotao();
+    public Botao(FabricaControle fabrica) {
+        controle = fabrica.criarControle();
     }
 
-    public void botao(){
+    public void apertarBotao(){
         controle.botao();
     }
 

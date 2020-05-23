@@ -4,5 +4,5 @@ import com.semanaquatro.abstractfactory.projeto.Controle;
 
 public interface FabricaControle {
 
-    Controle criarBotao();
+    Controle criarControle();
 }

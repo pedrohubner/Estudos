@@ -1,6 +1,6 @@
 package com.semanaquatro.abstractfactory;
 
-import com.semanaquatro.abstractfactory.cliente.ApertarBotao;
+import com.semanaquatro.abstractfactory.cliente.Botao;
 import com.semanaquatro.abstractfactory.fabrica.FabricaControle;
 import com.semanaquatro.abstractfactory.fabrica.FabricaControlePortao;
 import com.semanaquatro.abstractfactory.fabrica.FabricaControleTV;
@@ -8,26 +8,26 @@ import com.semanaquatro.abstractfactory.fabrica.FabricaControleVideoGame;
 
 public class Demo {
 
-    public static ApertarBotao pegandoControle(){
-        ApertarBotao ab;
+    public static Botao pegandoControle(){
+        Botao botao;
         FabricaControle prototipo;
 
-        String tipoBotao = System.getProperty("key", "videogame");
+        String tipoBotao = System.getProperty("key", "tv");
         if (tipoBotao.contains("videogame")) {
             prototipo = new FabricaControleVideoGame();
-            ab = new ApertarBotao(prototipo);
+            botao = new Botao(prototipo);
         } else if (tipoBotao.contains("tv")){
             prototipo = new FabricaControleTV();
-            ab = new ApertarBotao(prototipo);
+            botao = new Botao(prototipo);
         } else {
             prototipo = new FabricaControlePortao();
-            ab = new ApertarBotao(prototipo);
+            botao = new Botao(prototipo);
         }
-        return ab;
+        return botao;
     }
 
     public static void main(String[] args) {
-        ApertarBotao ab = pegandoControle();
-        ab.botao();
+        Botao botao = pegandoControle();
+        botao.apertarBotao();
     }
 }

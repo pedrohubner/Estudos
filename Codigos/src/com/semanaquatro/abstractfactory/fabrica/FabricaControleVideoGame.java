@@ -6,7 +6,7 @@ import com.semanaquatro.abstractfactory.projeto.ControleVideoGame;
 public class FabricaControleVideoGame implements FabricaControle {
 
     @Override
-    public Controle criarBotao() {
+    public Controle criarControle() {
         return new ControleVideoGame();
     }
 }
