@@ -4,12 +4,12 @@ import com.semanaquatro.bridge.fabricacao.Produto;
 
 public class Xseries extends Console {
 
-    public Xseries(Produto produto1, Produto produto2){
-        super(produto1, produto2);
+    public Xseries(Produto produto, Produto lancamento){
+        super(produto, lancamento);
     }
 
     @Override
     public String vender() {
-        return "Xbox seriesX" + produto1.produzir() + produto2.produzir();
+        return "Xbox seriesX" + produto.produzir() + lancamento.produzir();
     }
 }

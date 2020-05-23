@@ -4,12 +4,12 @@ import com.semanaquatro.bridge.fabricacao.Produto;
 
 abstract public class Console {
 
-    Produto produto1;
-    Produto produto2;
+    Produto produto;
+    Produto lancamento;
 
-    Console(Produto produto1, Produto produto2){
-        this.produto1 = produto1;
-        this.produto2 = produto2;
+    Console(Produto produto, Produto lancamento){
+        this.produto = lancamento;
+        this.lancamento = lancamento;
     }
 
     public abstract String vender();
