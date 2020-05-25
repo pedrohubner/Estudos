@@ -1,6 +1,6 @@
 package com.semanaum.reboot;
 
-public class CafeAcucar extends Coffee implements Acucar {
+public class CafeAcucar extends Cafe implements Acucar {
 
     private int colheresAcucar;
 
