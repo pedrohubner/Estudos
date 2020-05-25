@@ -1,10 +1,10 @@
 package com.semanaum.reboot;
 
-public class Coffee {
+public class Cafe {
 
     private boolean chaleiraLigada;
 
-    Coffee(boolean chaleiraLigada) {
+    Cafe(boolean chaleiraLigada) {
         this.chaleiraLigada = chaleiraLigada;
     }
 
