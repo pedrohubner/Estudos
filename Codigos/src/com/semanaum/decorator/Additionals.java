@@ -1,10 +1,15 @@
 package com.semanaum.decorator;
 
-public class Aditionals extends Production {
+public class Additionals extends Production {
 
-    Aditionals(boolean chaleiraLigada) {
-        super(chaleiraLigada);
+    Coffee coffee;
+
+    Additionals(Coffee coffee) {
+        this.coffee = coffee;
     }
 
-    sweetener
+    @Override
+    protected String makeCoffee(int colheresCafe, double litrosAgua) {
+        return null;
+    }
 }
