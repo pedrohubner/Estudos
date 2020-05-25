@@ -1,6 +1,6 @@
 package com.semanaum.reboot;
 
-public class CafeAdocante extends Coffee implements Adocante {
+public class CafeAdocante extends Cafe implements Adocante {
 
     private int gotasAdocante;
 
