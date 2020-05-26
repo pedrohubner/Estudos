@@ -1,6 +1,6 @@
-package com.semanaquatro.bridge.comercio;
+package com.semanaquatro.bridge.abstraction;
 
-import com.semanaquatro.bridge.fabricacao.Produto;
+import com.semanaquatro.bridge.implementation.Produto;
 
 public class Ps5 extends Console {
 

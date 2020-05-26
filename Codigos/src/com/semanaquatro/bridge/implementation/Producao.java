@@ -1,4 +1,4 @@
-package com.semanaquatro.bridge.fabricacao;
+package com.semanaquatro.bridge.implementation;
 
 public class Producao implements Produto {
 

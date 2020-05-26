@@ -1,10 +1,10 @@
 package com.semanaquatro.bridge;
 
-import com.semanaquatro.bridge.comercio.Console;
-import com.semanaquatro.bridge.comercio.Ps5;
-import com.semanaquatro.bridge.comercio.Xseries;
-import com.semanaquatro.bridge.fabricacao.Lancamento;
-import com.semanaquatro.bridge.fabricacao.Producao;
+import com.semanaquatro.bridge.abstraction.Console;
+import com.semanaquatro.bridge.abstraction.Ps5;
+import com.semanaquatro.bridge.abstraction.Xseries;
+import com.semanaquatro.bridge.implementation.Lancamento;
+import com.semanaquatro.bridge.implementation.Producao;
 
 public class StatusConsole {
     public static void main(String[] args) {

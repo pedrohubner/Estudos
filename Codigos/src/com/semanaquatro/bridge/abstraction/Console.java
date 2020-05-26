@@ -1,6 +1,6 @@
-package com.semanaquatro.bridge.comercio;
+package com.semanaquatro.bridge.abstraction;
 
-import com.semanaquatro.bridge.fabricacao.Produto;
+import com.semanaquatro.bridge.implementation.Produto;
 
 abstract public class Console {
 
@@ -8,7 +8,7 @@ abstract public class Console {
     Produto lancamento;
 
     Console(Produto produto, Produto lancamento){
-        this.produto = lancamento;
+        this.produto = produto;
         this.lancamento = lancamento;
     }
 

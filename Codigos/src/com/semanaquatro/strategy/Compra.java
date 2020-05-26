@@ -24,7 +24,6 @@ public class Compra {
 
         return pagamento1.selecionarOpcao();
     }
-
     private static String compraPorBoleto(){
         Scanner input = new Scanner(System.in);
 
