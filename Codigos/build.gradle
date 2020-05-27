@@ -1,20 +1,22 @@
-task tarefas {
+task school {
     println '===Escola==='
 }
 
-task tarefa {
+//TODO gradle plugin, repositories and dependencies
+
+task homework {
     println 'Tarefa do dia:'
 }
 
-task desenhar {
+task draw {
     print 'Desenhar'
 }
 
-task desenharJanelas {
+task drawingWindows {
     print ' janela'
 }
 
-task calculo {
+task uglyWindow {
     if (1 > 0) {
         println ' feia'
     }
