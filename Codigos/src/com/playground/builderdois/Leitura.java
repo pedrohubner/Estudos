@@ -1,4 +1,4 @@
-package com.playground.criandobuilder;
+package com.playground.builderdois;
 
 public class Leitura {
     public static void main(String[] args) {

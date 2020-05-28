@@ -1,4 +1,4 @@
-package com.playground.tarefa;
+package com.playground.cadastro;
 
 class Cidades {
 
