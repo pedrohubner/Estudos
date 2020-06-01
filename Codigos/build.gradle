@@ -1,17 +1,17 @@
 plugins {
     id 'java'
     id 'application'
-    id "org.springframework.boot" version "2.3.0.RELEASE"
+    //id "org.springframework.boot" version "2.3.0.RELEASE"
 }
 
 repositories {
     jcenter()
-    'org.springframework:boot.spring-boot:2.3.0.RELEASE'
+    //'org.springframework:boot.spring-boot:2.3.0.RELEASE'
 }
 
 dependencies {
     testImplementation 'junit:junit:4.12'
-    implementation 'org.springframework:spring-context:5.2.6.RELEASE'
+    //implementation 'org.springframework:spring-context:5.2.6.RELEASE'
 }
 
 application {
