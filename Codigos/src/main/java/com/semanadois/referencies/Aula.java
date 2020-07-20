@@ -1,4 +1,4 @@
-package com.semanadois.referencias;
+package com.semanadois.referencies;
 
 public class Aula {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class Aula {
         System.out.println("\n" + a3.getNome() + " alterou seu email para " + a3.getEmail());
 
         //Acessando referência
-        exibirCarteiraEstudante(a1);
+        System.out.println(exibirCarteiraEstudante(a1));
 
         System.out.println("Documento de " + a1.getNome() + ": " + a1.getId());
 
@@ -25,7 +25,7 @@ public class Aula {
     }
 
     //Passando parâmetro de referência id
-    public static void exibirCarteiraEstudante(Aluno a1){
-        a1.getId();
+    public static Integer exibirCarteiraEstudante(Aluno a1){
+        return a1.getId();
     }
 }
