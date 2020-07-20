@@ -1,4 +1,4 @@
-package com.semanadois.mutabilidade;
+package com.semanadois.mutability;
 
 public final class JavaImutavel {
 

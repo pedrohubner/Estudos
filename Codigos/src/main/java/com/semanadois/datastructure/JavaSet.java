@@ -1,13 +1,10 @@
-package com.semanadois.estruturas;
+package com.semanadois.datastructure;
 
 import java.util.*;
 
 public class JavaSet {
     public static void main(String[] args) throws NullPointerException{
 
-        /**
-         * Lista HashSet
-         */
         System.out.println("\nLista HashSet: ");
         HashSet<String> nome = new HashSet<>();
 
@@ -29,17 +26,7 @@ public class JavaSet {
 
         System.out.println(nome.contains("Petra"));
 
-        Iterator valor = nome.iterator();
-
-        System.out.println("\nOs valores são: ");
-        while (valor.hasNext()){
-            System.out.println(valor.next());
-        }
-
-        /**
-         * Lista TreeSet
-         */
-        System.out.println("\nLista TreeSet: ");
+       System.out.println("\nLista TreeSet: ");
         TreeSet<String> nome2 = new TreeSet<>();
 
         nome2.add("Fernandes");
@@ -64,16 +51,6 @@ public class JavaSet {
 
         System.out.println(nome2.contains("Petra"));
 
-        Iterator valor2 = nome2.iterator();
-
-        System.out.println("\nOs valores são: ");
-        while (valor2.hasNext()){
-            System.out.println(valor2.next());
-        }
-
-        /**
-         * Lista LinkedHashSet
-         */
         System.out.println("\nLista LinkedHashSet: ");
         LinkedHashSet<String> nome3 = new LinkedHashSet<>();
 
@@ -94,13 +71,5 @@ public class JavaSet {
         System.out.println(nome3);
 
         System.out.println(nome3.contains("Petra"));
-
-        Iterator valor3 = nome3.iterator();
-
-        System.out.println("\nOs valores são: ");
-        while (valor3.hasNext()){
-            System.out.println(valor3.next());
-        }
-
     }
 }

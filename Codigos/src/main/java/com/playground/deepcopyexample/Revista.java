@@ -1,4 +1,4 @@
-package com.semanadois.copy;
+package com.playground.deepcopyexample;
 
 public class Revista implements Cloneable{
 

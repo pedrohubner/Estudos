@@ -1,4 +1,4 @@
-package com.semanadois.mutabilidade;
+package com.semanadois.mutability;
 
 public class TestandoIm {
     public static void main(String[] args) {
