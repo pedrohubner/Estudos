@@ -1,11 +1,8 @@
-package com.semanadois.copy;
+package com.playground.deepcopyexample;
 
 public class Copias {
     public static void main(String[] args) throws CloneNotSupportedException {
 
-        /**
-         * SHALLOW COPY
-         */
         Revista revista1 = new Revista("Veja", 6.5);
         Revista revista2 = new Revista("Época", 7.9);
         Revista revista3 = new Revista("Guia do Estudante", 9.9);
@@ -22,9 +19,6 @@ public class Copias {
         System.out.println("\n" + novaRevista);
         System.out.println("\n" + revista1);
 
-        /**
-         * DEEP COPY
-         */
         Revista revista4 = new Revista("Amazing Fantasy", 4.5);
         Revista revista5 = new Revista("Detective Comics", 8.7);
         Revista revista6 = new Revista("Daredevil", 10.9);
