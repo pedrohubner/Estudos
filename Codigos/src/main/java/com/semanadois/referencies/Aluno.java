@@ -1,4 +1,4 @@
-package com.semanadois.referencias;
+package com.semanadois.referencies;
 
 public class Aluno {
 
