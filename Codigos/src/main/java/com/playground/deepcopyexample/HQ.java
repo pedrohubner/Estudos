@@ -1,4 +1,4 @@
-package com.semanadois.copy;
+package com.playground.deepcopyexample;
 
 public class HQ implements Cloneable{
 
@@ -28,13 +28,6 @@ public class HQ implements Cloneable{
         this.qntdPags = qntdPags;
     }
 
-    /**
-     * Descobrir porque do (HQ) -> Usando um cast para que o clone seja do tipo HQ
-     * Descobrir porque do super ->
-     *
-     * @return
-     * @throws CloneNotSupportedException
-     */
     @Override
     protected Object clone() throws CloneNotSupportedException {
         HQ novaHQ = (HQ) super.clone();
