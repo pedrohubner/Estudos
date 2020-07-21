@@ -2,15 +2,15 @@ package com.weekone.reboot;
 
 public class CafeAcucar extends Cafe implements Acucar {
 
-    private int colheresAcucar;
+    private final Integer colheresAcucar;
 
-    CafeAcucar(boolean chaleira, int colheresAcucar) {
+    CafeAcucar(Boolean chaleira, Integer colheresAcucar) {
         super(chaleira);
         this.colheresAcucar = colheresAcucar;
     }
 
     @Override
-    protected String fazerCafe(int colheresCafe, double litrosAgua) {
+    protected String fazerCafe(Integer colheresCafe, Double litrosAgua) {
         return super.fazerCafe(colheresCafe, litrosAgua) + adicionarAcucar();
     }
 

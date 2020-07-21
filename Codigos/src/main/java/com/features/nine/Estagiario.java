@@ -1,4 +1,4 @@
-package com.features.javanine;
+package com.features.nine;
 
 public class Estagiario implements Salario{
 

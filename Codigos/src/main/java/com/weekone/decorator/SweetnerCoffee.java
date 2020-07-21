@@ -2,15 +2,15 @@ package com.weekone.decorator;
 
 public class SweetnerCoffee extends Additionals {
 
-    private int sweetnerDrops;
+    private final Integer sweetnerDrops;
 
-    SweetnerCoffee(Coffee coffee, int sweetnerDrops) {
+    SweetnerCoffee(Coffee coffee, Integer sweetnerDrops) {
         super(coffee);
         this.sweetnerDrops = sweetnerDrops;
     }
 
     @Override
-    protected String makeCoffee(int colheresCafe, double litrosAgua) {
+    protected String makeCoffee(Integer colheresCafe, Double litrosAgua) {
         return coffee.makeCoffee(colheresCafe, litrosAgua) + addSweetner();
     }
 

@@ -1,4 +1,4 @@
-package com.features.javaten;
+package com.features.ten;
 
 public class Livros {
 

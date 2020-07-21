@@ -2,14 +2,14 @@ package com.weekone.decorator;
 
 public class Coffee extends Production {
 
-    private boolean chaleiraLigada;
+    private final Boolean chaleiraLigada;
 
     Coffee(boolean chaleiraLigada) {
         this.chaleiraLigada = chaleiraLigada;
     }
 
     @Override
-    protected String makeCoffee(int colheresCafe, double litrosAgua) {
+    protected String makeCoffee(Integer colheresCafe, Double litrosAgua) {
         if (!chaleiraLigada) {
             return "Adicionar " + colheresCafe + " colheres de café, mais "
                     + litrosAgua + "l de água e ligar chaleira.";

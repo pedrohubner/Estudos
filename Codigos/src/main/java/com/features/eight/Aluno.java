@@ -1,4 +1,4 @@
-package com.features.javaeight;
+package com.features.eight;
 
 public class Aluno implements Conselho{
 

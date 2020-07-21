@@ -2,19 +2,19 @@ package com.weekone.decorator;
 
 public class SugarCoffee extends Additionals {
 
-    private int sugarSpoons;
+    private final Integer sugarSpoons;
 
-    SugarCoffee(Coffee coffee, int sugarSpoons) {
+    SugarCoffee(Coffee coffee, Integer sugarSpoons) {
         super(coffee);
         this.sugarSpoons = sugarSpoons;
     }
 
-    public int getSugarSpoons() {
+    public Integer getSugarSpoons() {
         return sugarSpoons;
     }
 
     @Override
-    protected String makeCoffee(int colheresCafe, double litrosAgua) {
+    protected String makeCoffee(Integer colheresCafe, Double litrosAgua) {
         return coffee.makeCoffee(colheresCafe, litrosAgua) + addSugar();
     }
 

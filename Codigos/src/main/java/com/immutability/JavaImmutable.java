@@ -1,4 +1,4 @@
-package com.mutability;
+package com.immutability;
 
 public class JavaImmutable {
 

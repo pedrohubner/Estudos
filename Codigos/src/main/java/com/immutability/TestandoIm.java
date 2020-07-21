@@ -1,4 +1,4 @@
-package com.mutability;
+package com.immutability;
 
 public class TestandoIm {
     public static void main(String[] args) {

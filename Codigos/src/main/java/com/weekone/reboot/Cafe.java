@@ -2,13 +2,13 @@ package com.weekone.reboot;
 
 public class Cafe {
 
-    private boolean chaleiraLigada;
+    private final Boolean chaleiraLigada;
 
-    Cafe(boolean chaleiraLigada) {
+    Cafe(Boolean chaleiraLigada) {
         this.chaleiraLigada = chaleiraLigada;
     }
 
-    protected String fazerCafe(int colheresCafe, double litrosAgua) {
+    protected String fazerCafe(Integer colheresCafe, Double litrosAgua) {
         if (!chaleiraLigada) {
             return "Adicionar " + colheresCafe + " colheres de café, mais "
                     + litrosAgua + "l de água e ligar chaleira.";

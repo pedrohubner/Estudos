@@ -9,7 +9,7 @@ public class Additionals extends Production {
     }
 
     @Override
-    protected String makeCoffee(int colheresCafe, double litrosAgua) {
+    protected String makeCoffee(Integer colheresCafe, Double litrosAgua) {
         return null;
     }
 }

@@ -1,4 +1,4 @@
-package com.referencies;
+package com.references;
 
 public class Aula {
     public static void main(String[] args) {
