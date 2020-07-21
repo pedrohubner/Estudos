@@ -1,4 +1,4 @@
-package com.exceptions;
+package com.exceptions.unchecked;
 
 import java.util.Scanner;
 
