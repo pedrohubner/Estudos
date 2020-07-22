@@ -1,4 +1,4 @@
-package com.copy.deepcopy;
+package com.copy.cart;
 
 public class Client implements Cloneable {
 

@@ -1,4 +1,4 @@
-package com.copy.deepcopy;
+package com.copy.cart;
 
 public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
