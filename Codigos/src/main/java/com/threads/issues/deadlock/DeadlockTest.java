@@ -1,6 +1,6 @@
 package com.threads.issues.deadlock;
 
-public class ResolveDeadLockTest {
+public class DeadlockTest {
     public static void main(String[] args) {
 
         ElementA elementA = new ElementA(1);
