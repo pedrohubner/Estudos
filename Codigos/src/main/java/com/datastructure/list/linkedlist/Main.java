@@ -7,11 +7,11 @@ public class Main {
 
         LinkedList<Fila> fila = new LinkedList<>();
 
-        fila.add(new Fila("ChineoBoy"));
-        fila.add(new Fila("ChineoBoy"));
+        fila.add(new Fila("João Silva"));
+        fila.add(new Fila("Marta Silva"));
+        fila.add(new Fila("Marta Silva"));
         fila.add(null);
 
         System.out.println(fila);
-        System.out.println(fila.get(1));
     }
 }
