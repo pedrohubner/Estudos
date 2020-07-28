@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Fila {
 
-    private String pessoaNaFila;
+    private String pessoa;
 }
