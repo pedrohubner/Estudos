@@ -21,5 +21,9 @@ public class Main {
         bookStack.push(new Book(4, "\"The Last Olimpian\"", 40., 452, author));
 
         System.out.println(bookStack);
+
+        bookStack.pop();
+
+        System.out.println(bookStack);
     }
 }
