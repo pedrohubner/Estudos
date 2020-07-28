@@ -14,8 +14,8 @@ public class Counter implements Runnable {
         return number.get();
     }
 
-    public Integer increaseNumber() {
-        return number.getAndIncrement();
+    public void increaseNumber() {
+        number.getAndIncrement();
     }
 
     @Override
