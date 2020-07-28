@@ -18,7 +18,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "\nLivro: " + name + "\nAutor: " + author + "\nQntd. páginas: " + pages +
-                "\nPreço: R$" + value;
+        return name;
     }
 }
