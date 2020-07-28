@@ -2,6 +2,5 @@ package com.features.eight;
 
 public interface Conselho {
 
-    String verificarAprovacao();
-
+    Integer mediaDeNotas(int a, int b);
 }
