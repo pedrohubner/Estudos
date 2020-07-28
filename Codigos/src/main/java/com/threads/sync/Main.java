@@ -1,7 +1,7 @@
 package com.threads.sync;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Counter counter = new Counter();
 
@@ -11,12 +11,8 @@ public class Main {
         t1.start();
         t2.start();
 
-        try {
-            t1.join();
-            t2.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        t1.join();
+        t2.join();
 
         System.out.println(counter.getNumber());
     }
