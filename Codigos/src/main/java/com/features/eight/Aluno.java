@@ -1,16 +1,11 @@
 package com.features.eight;
 
-public class Aluno implements Conselho{
+public class Aluno {
 
     private String nome;
-    private Long matricula;
-    private Integer turma;
     private Integer notaFinal;
 
-    public Aluno(String nome, Long matricula, Integer turma, Integer notaFinal){
-        this.nome = nome;
-        this.matricula = matricula;
-        this.turma =  turma;
+    public Aluno(String nome, Integer notaFinal){
         this.notaFinal = notaFinal;
     }
 
@@ -22,22 +17,6 @@ public class Aluno implements Conselho{
         this.nome = nome;
     }
 
-    public long getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(long matricula) {
-        this.matricula = matricula;
-    }
-
-    public int getTurma() {
-        return turma;
-    }
-
-    public void setTurma(int turma) {
-        this.turma = turma;
-    }
-
     public Integer getNotaFinal(){
         return notaFinal;
     }
@@ -46,20 +25,8 @@ public class Aluno implements Conselho{
         this.notaFinal = notaFinal;
     }
 
-    public String exibeDados(){
-        return "Aluno(a) " + nome + "(" + matricula + ") da turma " + turma + ".";
-    }
-
     @Override
     public String toString() {
-        return  nome + " da turma " + turma;
-    }
-
-    @Override
-    public String verificarAprovacao() {
-        if (notaFinal >= 6){
-            return nome + " foi aprovado. Nota final: " + notaFinal ;
-        }else
-            return nome + " foi reprovado. Nota final: " + notaFinal ;
+        return  nome;
     }
 }
