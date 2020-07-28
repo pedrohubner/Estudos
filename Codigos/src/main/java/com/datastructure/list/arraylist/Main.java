@@ -10,12 +10,13 @@ public class Main {
         productsList.add(new Product("Dorflex", 5.5, 12));
         productsList.add(new Product("Dipirona", 4.0, 24));
         productsList.add(new Product("Torsilax", 11.9, 36));
+        productsList.add(null);
 
         ShoppingCart shoppingCart = ShoppingCart.builder()
                 .id(1)
                 .productList(productsList)
                 .build();
 
-        System.out.println(shoppingCart.getProductList().get(0));
+        System.out.println(shoppingCart.getProductList().get(3));
     }
 }
