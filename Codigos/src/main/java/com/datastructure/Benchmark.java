@@ -22,7 +22,7 @@ public class Benchmark {
         Long c = System.currentTimeMillis();
 
         for (int i = 500000; i > 0; i--) {
-            estrutura.remove(i);
+            estrutura.pop();
         }
 
         Long d = System.currentTimeMillis();
