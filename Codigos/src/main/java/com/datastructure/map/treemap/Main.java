@@ -5,12 +5,12 @@ import java.util.TreeMap;
 public class Main {
     public static void main(String[] args) {
 
-        TreeMap<Integer, Integer> integerMap = new TreeMap<>();
+        TreeMap<House, String> integerMap = new TreeMap<>();
+        House house = new House("Verde", "Vermelho");
+        House house1 = new House("Azul", "Cinza");
 
-            integerMap.put(3, 2);
-            integerMap.put(1, 1);
-            integerMap.put(1, 1);
-            integerMap.put(2, null);
+            integerMap.put(house, "2");
+            integerMap.put(house1, "1");
 
         System.out.println(integerMap);
     }
