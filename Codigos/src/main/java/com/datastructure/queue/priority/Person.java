@@ -1,6 +1,6 @@
 package com.datastructure.queue.priority;
 
-public class Person {
+public class Person implements Comparable<Person> {
 
     private String name;
     private Integer age;
@@ -21,5 +21,14 @@ public class Person {
     @Override
     public String toString() {
         return name;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if (age < o.age)
+            return -1;
+        else if (age.equals(o.age))
+            return 0;
+        return 1;
     }
 }
