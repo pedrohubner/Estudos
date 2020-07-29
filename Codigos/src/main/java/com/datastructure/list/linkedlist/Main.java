@@ -13,5 +13,7 @@ public class Main {
         fila.add(null);
 
         System.out.println(fila);
+
+        System.out.println(fila.get(2));
     }
 }
