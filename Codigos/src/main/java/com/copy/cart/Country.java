@@ -23,6 +23,6 @@ public class Country implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        return (Country) super.clone();
     }
 }

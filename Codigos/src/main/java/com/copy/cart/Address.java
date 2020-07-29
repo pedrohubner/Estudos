@@ -44,6 +44,8 @@ public class Address implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        Address address = (Address) super.clone();
+        address.country = (Country) country.clone();
+        return address;
     }
 }

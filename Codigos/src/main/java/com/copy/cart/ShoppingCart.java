@@ -45,6 +45,8 @@ public class ShoppingCart implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        ShoppingCart shoppingCart = (ShoppingCart) super.clone();
+        shoppingCart.client = (Client) client.clone();
+        return shoppingCart;
     }
 }

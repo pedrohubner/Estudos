@@ -53,6 +53,8 @@ public class Client implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        Client client = (Client) super.clone();
+        client.address = (Address) address.clone();
+        return client;
     }
 }
