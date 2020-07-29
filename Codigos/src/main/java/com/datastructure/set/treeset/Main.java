@@ -5,16 +5,17 @@ import java.util.TreeSet;
 public class Main {
     public static void main(String[] args) {
 
-        TreeSet<Integer> treeSet = new TreeSet<>();
+        TreeSet<Person> treeSet = new TreeSet<>();
 
-        try {
-            treeSet.add(22);
-            treeSet.add(22);
-            treeSet.add(5);
-            treeSet.add(null);
-        } catch (Exception e) {
-            throw new RuntimeException("Não é possível adicionar elementos nulos");
-        }
+        Person person3 = new Person("Viviane");
+        Person person = new Person("Pedro");
+        Person person2 = new Person("Samuel");
+        Person person1 = new Person("Davi");
+
+        treeSet.add(person2);
+        treeSet.add(person1);
+        treeSet.add(person);
+        treeSet.add(person3);
 
         System.out.println(treeSet);
     }
