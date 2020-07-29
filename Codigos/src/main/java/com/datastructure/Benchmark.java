@@ -1,11 +1,12 @@
-package com;
+package com.datastructure;
+
 
 import java.util.*;
 
-public class Teste {
+public class Benchmark {
     public static void main(String[] args) {
 
-        LinkedList<String> estrutura = new LinkedList<>();
+        Stack<String> estrutura = new Stack<>();
 
         Long a = System.currentTimeMillis();
 
@@ -20,8 +21,8 @@ public class Teste {
 
         Long c = System.currentTimeMillis();
 
-            for (int i = 500000; i > 0; i--) {
-            estrutura.remove("");
+        for (int i = 500000; i > 0; i--) {
+            estrutura.remove(i);
         }
 
         Long d = System.currentTimeMillis();
