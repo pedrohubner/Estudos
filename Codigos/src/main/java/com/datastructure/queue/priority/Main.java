@@ -18,11 +18,7 @@ public class Main {
         integerPriorityQueue.add(person);
         integerPriorityQueue.add(person1);
         integerPriorityQueue.add(person2);
-
-        System.out.println(integerPriorityQueue);
-
-        integerPriorityQueue.poll();
-
-        System.out.println(integerPriorityQueue);
+        integerPriorityQueue.stream().sorted()
+                .forEachOrdered(System.out::println);
     }
 }
