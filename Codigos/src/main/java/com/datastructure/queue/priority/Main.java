@@ -11,7 +11,7 @@ public class Main {
         Person person1 = new Person("Pedro", 18);
 
         //
-        Comparator<Person> compPerson = (age1, age2) -> age1.getAge().compareTo(age2.getAge());
+        Comparator<Person> compPerson = (var age1, var age2) -> age1.getAge().compareTo(age2.getAge());
 
         PriorityQueue<Person> integerPriorityQueue = new PriorityQueue<>(compPerson);
 
