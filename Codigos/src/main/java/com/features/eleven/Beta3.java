@@ -5,7 +5,10 @@ public class Beta3 {
 
         String endereco = " Casmurro ";
 
-        System.out.println("\nString está vazia? " + endereco.isBlank());
+        if (endereco.isBlank()) {
+            System.out.println("String está vazia");
+        }
+        System.out.println("String tem corpo");
 
         System.out.print("\nDom");
         System.out.print(endereco.strip());
