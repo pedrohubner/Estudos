@@ -12,8 +12,8 @@ public class Counter implements Runnable {
         return number;
     }
 
-    public synchronized Integer increaseNumber() {
-        return number++;
+    public synchronized void increaseNumber() {
+        number++;
     }
 
     @Override
