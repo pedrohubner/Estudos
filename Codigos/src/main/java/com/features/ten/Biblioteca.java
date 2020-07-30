@@ -1,8 +1,7 @@
 package com.features.ten;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
 public class Biblioteca {
     public static void main(String[] args) {
@@ -16,28 +15,34 @@ public class Biblioteca {
 
         classificacao.forEach(System.out::println);
 
-        Livros livro = new Livros("\"Blade Runner\"", "Aleph", 252, 59.9,
-                5);
-        Livros livro2 = new Livros("\"O Homem No Castelo Alto\"", "Aleph", 376, 42.5,
-                2);
-        Livros livro3 = new Livros("\"Eu, Robô\"", "Aleph", 460, 39.9,
-                6);
+        Books livro = Books.builder()
+                .build();
+        Books livro2 = Books.builder()
+                .titulo("The Man in The HighCastle")
+                .build();
+        Books livro3 = Books.builder()
+                .titulo("I, Robot")
+                .build();
+        Books livro4 = Books.builder()
+                .titulo("Clean Code")
+                .build();
+        Books books = Books.builder()
+                .titulo("Caçador de Andróides")
+                .build();
 
-        List<Livros> estante = new ArrayList<>();
+        List<Books> estante = new LinkedList<>();
 
         estante.add(livro);
         estante.add(livro2);
         estante.add(livro3);
 
-        Set<Livros> novaEstante = Set.copyOf(estante);
+        List<Books> novaEstante = List.copyOf(estante);
 
-        System.out.println("\nLista de livros disponíveis na loja:");
+//        System.out.println("\nLista de livros disponíveis na loja:");
+//
+//        System.out.println("\nLivros nova estante: ");
+//        novaEstante.forEach(Books::exibirLivros);
 
-        novaEstante.forEach(Livros::exibirLivros);
-
-        System.out.println("\n" + livro2.checarEstoque(2));
-
-//        Map<Integer, Livros> outraNovaEstante = Map.copyOf(num,estante);
-
+        System.out.println(livro.isEmpty());
     }
 }
