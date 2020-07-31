@@ -38,11 +38,9 @@ public class Biblioteca {
 
         List<Books> novaEstante = List.copyOf(estante);
 
-//        System.out.println("\nLista de livros disponíveis na loja:");
-//
-//        System.out.println("\nLivros nova estante: ");
-//        novaEstante.forEach(Books::exibirLivros);
+        estante.add(livro4);
 
-        System.out.println(livro.isEmpty());
+        System.out.println(estante);
+        System.out.println(novaEstante);
     }
 }
