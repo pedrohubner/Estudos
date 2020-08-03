@@ -9,8 +9,13 @@ public class Main {
 
         Stream<Person> personStream = Stream.of(person);
 
-        personStream.filter(person1 -> person.getAge() > 10)
-                .map(person1 -> person.getAge() * 10)
+        personStream.filter(person1 -> person1.getAge() > 10)
+                .map(person1 -> {
+                    person1.setAge(person1.getAge() * 10);
+                    return person1.getAge();
+                })
                 .forEach(System.out::println);
+
+        System.out.println(person.getAge());
     }
 }
