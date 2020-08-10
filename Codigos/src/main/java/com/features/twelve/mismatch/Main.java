@@ -11,14 +11,14 @@ public class Main {
         System.out.println(path);
         String s = Files.readString(path);
         System.out.println(s);
-
-        Path path1 = Files.writeString(
-                Files.createTempFile("arquivoDois", ".txt"), "Hello, world");
-        System.out.println(path);
-        String s1 = Files.readString(path);
-        System.out.println(s);
-
-        System.out.println("\nOs arquivos '" + " arquivoUm " + "' e '" + " arquivoDois " + "' são iguais? "
-                + (Files.mismatch(path, path1) == -1 ? "Sim" : "Não"));
+//
+//        Path path1 = Files.writeString(
+//                Files.createTempFile("arquivoDois", ".txt"), "Hello, world");
+//        System.out.println(path);
+//        String s1 = Files.readString(path);
+//        System.out.println(s);
+//
+//        System.out.println("\nOs arquivos '" + " arquivoUm " + "' e '" + " arquivoDois " + "' são iguais? "
+//                + (Files.mismatch(path, path1) == -1 ? "Sim" : "Não"));
     }
 }
