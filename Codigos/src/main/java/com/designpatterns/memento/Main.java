@@ -9,13 +9,13 @@ public class Main {
         List<BackUp> backUpList = new ArrayList<>();
 
         Message message = new Message();
-        JohnDoe johnDoe = new JohnDoe(backUpList);
+        Changes change = new Changes(backUpList);
 
         message.setMessage("Hello, World");
-        johnDoe.saveChanges(message.saveBackUp());
+        change.saveChanges(message.saveBackUp());
 
         message.setMessage("How u doing?");
-        johnDoe.saveChanges(message.saveBackUp());
+        change.saveChanges(message.saveBackUp());
 
         message.setMessage("Good bye!");
         System.out.println("Mensagem atual: " + message);
