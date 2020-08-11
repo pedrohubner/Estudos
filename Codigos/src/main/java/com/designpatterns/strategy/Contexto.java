@@ -8,7 +8,7 @@ public class Contexto {
         this.opcoes = opcoes;
     }
 
-    String selecionarOpcao(){
+    String selecionarOpcao() {
         return opcoes.notaFiscal();
     }
 }

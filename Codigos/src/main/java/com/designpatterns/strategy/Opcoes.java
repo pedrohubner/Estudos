@@ -2,19 +2,19 @@ package com.designpatterns.strategy;
 
 public abstract class Opcoes {
 
-    private double valor;
+    private Double valor;
     private String destinatario;
 
-    Opcoes(double valor, String destinatario){
+    Opcoes(Double valor, String destinatario) {
         this.valor = valor;
         this.destinatario = destinatario;
     }
 
-    public double getValor(){
+    public double getValor() {
         return valor;
     }
 
-    protected String notaFiscal(){
+    protected String notaFiscal() {
         return "Destinatário: " + destinatario + "\nValor: " + valor;
     }
 

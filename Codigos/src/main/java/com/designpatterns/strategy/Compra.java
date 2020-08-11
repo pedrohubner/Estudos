@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Compra {
 
-    private static String compraPorCartao(){
+    private static String compraPorCartao() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Digite os dados do cartão: ");
@@ -24,7 +24,8 @@ public class Compra {
 
         return pagamento1.selecionarOpcao();
     }
-    private static String compraPorBoleto(){
+
+    private static String compraPorBoleto() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Digite os dados do boleto: ");
@@ -42,6 +43,7 @@ public class Compra {
 
         return pagamento2.selecionarOpcao();
     }
+
     public static void main(String[] args) {
 
         System.out.println(compraPorCartao());
