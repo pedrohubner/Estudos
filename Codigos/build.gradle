@@ -1,26 +1,21 @@
 plugins {
     id 'java'
     id 'application'
-    id "org.springframework.boot" version "2.3.0.RELEASE"
 }
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    repositories {
+        jcenter()
     }
-}
 
-repositories {
-    jcenter()
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation 'junit:junit:4.12'
-    implementation 'org.springframework:spring-webmvc:5.2.6.RELEASE'
-    compileOnly 'org.projectlombok:lombok:1.18.12'
-    annotationProcessor 'org.projectlombok:lombok:1.18.12'
-
+    dependencies {
+        testImplementation 'junit:junit:4.12'
+        compileOnly 'org.projectlombok:lombok:1.18.12'
+        annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    }
 }
 
 application {
