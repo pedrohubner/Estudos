@@ -1,4 +1,4 @@
-package com.weekone.decorator;
+package com.coffee.decorator;
 
 public class MakingCoffee {
     public static void main(String[] args) {

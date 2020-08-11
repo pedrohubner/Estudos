@@ -1,4 +1,4 @@
-package com.weekone.reboot;
+package com.coffee.reboot;
 
 public class CafeAcucar extends Cafe implements Acucar {
 

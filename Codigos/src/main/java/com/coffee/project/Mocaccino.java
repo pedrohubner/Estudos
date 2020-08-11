@@ -1,4 +1,4 @@
-package com.weekone.project;
+package com.coffee.project;
 
 public class Mocaccino extends Cafe {
 
