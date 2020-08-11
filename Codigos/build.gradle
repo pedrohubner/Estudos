@@ -3,6 +3,10 @@ plugins {
     id 'application'
 }
 
+dependencies {
+    implementation project(':contract')
+}
+
 allprojects {
     apply plugin: 'java'
     apply plugin: 'application'
