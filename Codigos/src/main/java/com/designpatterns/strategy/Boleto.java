@@ -2,10 +2,10 @@ package com.designpatterns.strategy;
 
 public class Boleto extends Opcoes {
 
-    private long codigo;
+    private Long codigo;
     private String data;
 
-    Boleto(double valor, String destinatario, long codigo, String data) {
+    Boleto(Double valor, String destinatario, Long codigo, String data) {
         super(valor, destinatario);
         this.codigo = codigo;
         this.data = data;
@@ -22,8 +22,8 @@ public class Boleto extends Opcoes {
     @Override
     protected String notaFiscal() {
         return "====Boleto===="
-        + "\nCódigo: " + codigo
-        + "\n" + super.notaFiscal()
-        + "\nData: " + data;
+                + "\nCódigo: " + codigo
+                + "\n" + super.notaFiscal()
+                + "\nData: " + data;
     }
 }
