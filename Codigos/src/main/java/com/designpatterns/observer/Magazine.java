@@ -5,15 +5,15 @@ import java.util.List;
 public class Magazine implements Publisher {
 
     private String name;
-    private String disponibility;
+    private String availability;
     private List<Subscriber> subscriberList;
 
     Magazine() {
     }
 
-    Magazine(String name, String disponibility, List<Subscriber> subscriberList) {
+    Magazine(String name, String availability, List<Subscriber> subscriberList) {
         this.name = name;
-        this.disponibility = disponibility;
+        this.availability = availability;
         this.subscriberList = subscriberList;
     }
 
@@ -25,13 +25,13 @@ public class Magazine implements Publisher {
         this.name = name;
     }
 
-    public String getDisponibility() {
-        return disponibility;
+    public String getavailability() {
+        return availability;
     }
 
-    public void setDisponibility(String disponibility) {
-        this.disponibility = disponibility;
-        notifyObserver();
+    public void setAvailability(String availability) {
+        this.availability = availability;
+        notifySubscriber();
     }
 
     public List<Subscriber> getSubscriberList() {
@@ -43,17 +43,17 @@ public class Magazine implements Publisher {
     }
 
     @Override
-    public void registerObserver(Subscriber subscriber) {
+    public void registerSubscriber(Subscriber subscriber) {
         subscriberList.add(subscriber);
     }
 
     @Override
-    public void removeObserver(Subscriber subscriber) {
+    public void removeSubscriber(Subscriber subscriber) {
         subscriberList.remove(subscriber);
     }
 
     @Override
-    public void notifyObserver() {
+    public void notifySubscriber() {
         for (Subscriber sub : subscriberList) {
             sub.update(this);
         }
