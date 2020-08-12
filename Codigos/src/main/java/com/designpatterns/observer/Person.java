@@ -22,6 +22,6 @@ public class Person implements Subscriber {
     @Override
     public void update(Magazine magazine) {
         System.out.println("Olá, " + firstName + "! A nova edição de " +
-                magazine.getName() + " está " + magazine.getDisponibility() + " para compra!");
+                magazine.getName() + " está " + magazine.getAvailability() + " para compra!");
     }
 }

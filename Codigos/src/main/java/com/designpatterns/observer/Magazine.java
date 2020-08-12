@@ -25,7 +25,7 @@ public class Magazine implements Publisher {
         this.name = name;
     }
 
-    public String getavailability() {
+    public String getAvailability() {
         return availability;
     }
 

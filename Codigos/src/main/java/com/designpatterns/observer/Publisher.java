@@ -2,7 +2,7 @@ package com.designpatterns.observer;
 
 public interface Publisher {
 
-    public void registerObserver(Subscriber subscriber);
-    public void removeObserver(Subscriber subscriber);
-    public void notifyObserver();
+    public void registerSubscriber(Subscriber subscriber);
+    public void removeSubscriber(Subscriber subscriber);
+    public void notifySubscriber();
 }

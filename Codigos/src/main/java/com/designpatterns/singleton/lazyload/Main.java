@@ -6,6 +6,10 @@ public class Main {
         Bean bean = Bean.getInstance();
         Bean bean1 = Bean.getInstance();
 
+        var bean3 = bean;
+
+        bean3 = null;
+
         System.out.println(bean.hashCode());
     }
 }
