@@ -7,11 +7,10 @@ public class Bean {
     private Bean() {
     }
 
-    public static Bean getInstance() {
+    public static Bean validateInstance() {
         if (instance == null) {
-            synchronized (Bean.class) {
-                instance = new Bean();
-            }
+            instance = new Bean();
+            System.out.println("Objeto singleton criado");
         }
         return instance;
     }
