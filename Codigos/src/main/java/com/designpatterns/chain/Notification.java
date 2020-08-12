@@ -7,7 +7,7 @@ public class Notification {
         SMSNotification smsNotification = new SMSNotification(emailNotification);
         TeamsNotification teamsNotification = new TeamsNotification(smsNotification);
 
-        Request exibirMensagem = new Request("Sms");
+        Request exibirMensagem = new Request("Email");
 
         System.out.println(teamsNotification.choose(exibirMensagem));
     }
