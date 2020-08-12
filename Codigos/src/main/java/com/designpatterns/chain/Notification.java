@@ -9,6 +9,6 @@ public class Notification {
 
         Request exibirMensagem = new Request("Sms");
 
-        System.out.println(teamsNotification.escolher(exibirMensagem));
+        System.out.println(teamsNotification.choose(exibirMensagem));
     }
 }
