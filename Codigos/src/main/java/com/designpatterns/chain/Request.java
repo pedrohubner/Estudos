@@ -2,17 +2,17 @@ package com.designpatterns.chain;
 
 public class Request {
 
-    private String tipoMensagem;
+    private String messageType;
 
-    Request(String tipoMensagem) {
-        this.tipoMensagem = tipoMensagem;
+    Request(String messageType) {
+        this.messageType = messageType;
     }
 
-    String getTipoMensagem() {
-        return tipoMensagem;
+    String getMessageType() {
+        return messageType;
     }
 
-    public void setTipoMensagem(String tipoMensagem) {
-        this.tipoMensagem = tipoMensagem;
+    public void setMessageType(String messageType) {
+        this.messageType = messageType;
     }
 }
