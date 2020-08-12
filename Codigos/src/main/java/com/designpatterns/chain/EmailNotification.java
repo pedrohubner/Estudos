@@ -1,16 +1,16 @@
 package com.designpatterns.chain;
 
-public class EmailNotification extends HandlerNotificacao {
+public class EmailNotification extends NotificationHandler {
 
-    EmailNotification(HandlerNotificacao msg) {
+    EmailNotification(NotificationHandler msg) {
         super(msg);
     }
 
     @Override
-    protected String escolher(Request pedido) {
-        if (pedido.getTipoMensagem().equals("Email"))
-            return "Notificação via email";
+    protected String choose(Request request) {
+        if (request.getMessageType().equals("Email"))
+            return "Email: você possui uma nova notificação no email";
         else
-            return proximo(pedido);
+            return next(request);
     }
 }
