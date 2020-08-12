@@ -9,7 +9,7 @@ public class TeamsNotification extends NotificationHandler {
     @Override
     protected String choose(Request request) {
         if (request.getMessageType().equals("Teams"))
-            return "Notificação via Teams";
+            return "Teams: você recebeu uma nova mensagem no Teams";
         else
             return next(request);
     }
