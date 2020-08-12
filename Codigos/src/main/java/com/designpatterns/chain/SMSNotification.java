@@ -1,16 +1,16 @@
 package com.designpatterns.chain;
 
-public class SMSNotification extends HandlerNotificacao {
+public class SMSNotification extends NotificationHandler {
 
-    SMSNotification(HandlerNotificacao msg) {
+    SMSNotification(NotificationHandler msg) {
         super(msg);
     }
 
     @Override
-    protected String escolher(Request pedido) {
-        if (pedido.getTipoMensagem().equals("Sms"))
-            return "Notificação sms";
+    protected String choose(Request request) {
+        if (request.getMessageType().equals("Sms"))
+            return "SMS: Você possui uma nova mensagem!";
         else
-            return proximo(pedido);
+            return next(request);
     }
 }
