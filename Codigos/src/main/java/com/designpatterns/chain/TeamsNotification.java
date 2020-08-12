@@ -1,16 +1,16 @@
 package com.designpatterns.chain;
 
-public class TeamsNotification extends HandlerNotificacao {
+public class TeamsNotification extends NotificationHandler {
 
-    TeamsNotification(HandlerNotificacao msg) {
+    TeamsNotification(NotificationHandler msg) {
         super(msg);
     }
 
     @Override
-    protected String escolher(Request pedido) {
-        if (pedido.getTipoMensagem().equals("Teams"))
+    protected String choose(Request request) {
+        if (request.getMessageType().equals("Teams"))
             return "Notificação via Teams";
         else
-            return proximo(pedido);
+            return next(request);
     }
 }
