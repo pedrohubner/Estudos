@@ -13,13 +13,13 @@ public class Main {
 
         Magazine magazine = new Magazine("Times", "disponível", people);
 
-        magazine.registerObserver(person);
-        magazine.registerObserver(person1);
+        magazine.registerSubscriber(person);
+        magazine.registerSubscriber(person1);
 
-        magazine.setDisponibility("indisponível");
+        magazine.setAvailability("indisponível");
 
-        magazine.removeObserver(person1);
+        magazine.removeSubscriber(person1);
 
-        magazine.setDisponibility("disponível");
+        magazine.setAvailability("disponível");
     }
 }
