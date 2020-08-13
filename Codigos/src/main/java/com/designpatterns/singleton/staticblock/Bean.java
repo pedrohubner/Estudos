@@ -10,8 +10,8 @@ public class Bean {
     static {
         try {
             instance = new Bean();
-        } catch (RuntimeException e) {
-            System.out.println("Ocorreu um erro na criação do objeto.");
+        } catch (Exception e) {
+            System.out.println("Ocorreu um erro inesperado.");
         }
     }
 
